@@ -1,7 +1,7 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import { Homepage, FindDoctors, Services, VideoConsult, SignIn } from "./pages";
-import Navbar from "./components/Navbar";
+import { Navbar, Footer } from "./components";
 function App() {
   return (
     <div className="App">
@@ -13,7 +13,7 @@ function App() {
         <Route path="/video_consult" element={<VideoConsult />}></Route>
         <Route path="/signin" element={<SignIn />} />
       </Routes>
-      <h1>Footer</h1>
+      <Footer />
     </div>
   );
 }
