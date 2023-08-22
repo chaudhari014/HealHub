@@ -1,8 +1,12 @@
 .NavbarItems {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #082847;
+  background-color: #011224;
   padding: 5px 100px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
 }
@@ -92,9 +96,10 @@
     right: -4000px;
     width: 100%;
     height: 100vh;
-    background: #152e4d;
+    background: #021730;
     box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
     padding: 30px 0 0 10px;
+    overflow: scroll;
   }
 
   #navbar.active {
@@ -143,9 +148,10 @@
     letter-spacing: 1.5px;
   }
   .navbarTempData p:nth-child(1) span {
+    font-size: medium;
     padding: 5px;
     margin-left: 5px;
-    background-color: #bd1f95;
+    background-color: #f87a09;
     border-radius: 5px;
   }
 }

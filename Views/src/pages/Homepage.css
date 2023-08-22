@@ -1,0 +1,12 @@
+.HomePage {
+  width: 80%;
+  margin: auto;
+}
+
+.HomePage .add01 {
+  margin-top: 10px;
+}
+
+.HomePage .add01 img {
+  width: 100%;
+}
