@@ -1,6 +1,11 @@
 const express = require('express');
 const { connect } = require('./database/db');
-const app = express(); 
+const { registerRouter } = require('./routes/register.routes');
+const app = express();
+
+app.use(express.json());
+
+app.use("/", registerRouter);
 
 app.listen(3000, async () => {
     try {
