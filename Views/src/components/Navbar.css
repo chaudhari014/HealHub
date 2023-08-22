@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   background-color: #022653;
-  padding: 5px 50px;
+  padding: 5px 100px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
 }
 
@@ -15,14 +15,14 @@
 
 #navbar li {
   list-style: none;
-  padding: 0 20px;
+  padding: 0 15px;
   position: relative;
 }
 
 #navbar li a {
   text-decoration: none;
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 500;
   color: aliceblue;
   transition: 0.3s ease-in-out;
 }
@@ -40,13 +40,12 @@
   left: 20px;
 }
 
-.loginButton button,
-.mobileloginButton button {
+.loginButton button {
   border: none;
   padding: 10px 15px;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 600;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .loginButton:hover {
@@ -70,7 +69,7 @@
 
 @media screen and (max-width: 1100px) {
   .NavbarItems {
-    padding: 5px 20px;
+    padding: 5px 50px;
   }
   .hideHome {
     display: none;
@@ -87,13 +86,13 @@
     align-items: flex-start;
     justify-content: flex-start;
     position: fixed;
-    top: 76px;
-    right: -400px;
-    width: 400px;
-    height: 100vh;
-    background: #022653;
+    top: 98px;
+    right: -4000px;
+    width: 100%;
+    height:100vh;
+    background: #152e4d;
     box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
-    padding: 10px 0 0 20px;
+    padding: 30px 0 0 10px;
   }
 
   #navbar.active {
@@ -101,7 +100,17 @@
   }
 
   #navbar li {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
+  }
+  #navbar li a{
+    font-size: 21px;
+  }
+  #navbar li a i{
+    margin-right: 12px;
+  }
+  #navbar li a span{
+    font-size: medium;
+    letter-spacing: 1px;
   }
 
   #mobile {
@@ -115,11 +124,42 @@
     font-size: 25px;
     cursor: pointer;
   }
+
+  .Logo {
+    width: 200px;
+  }
+  .navbarTempData {
+    color: white;
+  }
+  .navbarTempData p:nth-child(1) {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .navbarTempData p:nth-child(2) {
+    font-size: 1.1rem;
+    letter-spacing: 1.5px;
+  }
+  .navbarTempData p:nth-child(1) span {
+    padding: 5px;
+    margin-left: 5px;
+    background-color: #bd1f95;
+    border-radius: 5px;
+  }
 }
 
 @media screen and (max-width: 500px) {
   #navbar {
     width: 100%;
     right: -1000px;
+  }
+  .navbarTempData p:nth-child(1) {
+    font-size: 1.2rem;
+  }
+  .navbarTempData p:nth-child(2) {
+    font-size: 1rem;
+  }
+  #navbar li a{
+    font-size: 20px;
   }
 }
