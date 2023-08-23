@@ -2,26 +2,32 @@
   {
     "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_instant_video_consulation.png",
     "data1": "Instant Video Consultation",
-    "data2": "Connect within 60 secs"
+    "data2": "Connect within 60 secs",
+    "color": "#afcfed"
   },
   {
     "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
     "data1": "Find Doctors Near You",
-    "data2": "Confirmed appointments"
+    "data2": "Confirmed appointments",
+    "color": "#98cbd6"
+  },
+  {
+    "image": "https://cdn.pixabay.com/photo/2013/11/24/11/26/experiment-217201_640.jpg",
+    "data1": "Lab Tests",
+    "data2": "Sample pickup at your home",
+    "color": "#afcfed"
   },
   {
     "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_medicines.png",
     "data1": "Medicines",
-    "data2": "Essentials at your doorstep"
+    "data2": "Essentials at your doorstep",
+    "color": "#ccd0db"
   },
-  {
-    "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_lab_tests.png",
-    "data1": "Lab Tests",
-    "data2": "Sample pickup at your home"
-  },
+
   {
     "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_surgeries.png",
     "data1": "Surgeries",
-    "data2": "Safe and trusted surgery centers"
+    "data2": "Safe and trusted surgery centers",
+    "color": "#d5d8fc"
   }
 ]

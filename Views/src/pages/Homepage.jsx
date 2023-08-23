@@ -1,7 +1,7 @@
 import { Cards } from "../components";
 import { banner01 } from "../images";
-import "./Homepage.css";
 import CardDetails01 from "../data/cardsdata.json";
+import "./Homepage.css";
 
 function Homepage() {
   return (

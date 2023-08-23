@@ -10,3 +10,14 @@
 .HomePage .add01 img {
   width: 100%;
 }
+
+/* Card 01 */
+
+.CardMain01 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
