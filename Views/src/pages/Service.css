@@ -31,12 +31,13 @@
     width: 100px;
     border-radius: 5px;
     border: 0;
-    margin-left: 20%;
+    
 }
 
 #card button:hover{
     color: black;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
 }
 
 h1{
@@ -48,6 +49,78 @@ h2{
     margin-left: 6%;
 }
 
-@media screen and (max-width:1150) {
+#banner{
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+    background-color: bisque;
+}
+#banner div{
+    width: 50%;
+}
+#banner div h1{
+    margin: 0 0 10px 0;
+}
+#banner div img{
+    width: 100%;
+}
+
+#banner div button{
+    margin-top: 15px;
+    border: 0;
+    background-color: #00897B ;
+    color: white;
+    height: 50px;
+    width: 120px;
+    font-size: medium;
+    border-radius: 7px;
+}
+#banner div button:hover{
+    cursor: pointer;
+
+}
+
+#banner :nth-child(1){
+    padding: 50px 0 0 80px;
+    text-align: left;
+    
+}
+
+#card1{
+    width: 98%;
+    margin: 0 1% 0 1%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 0 0 1.5% 0;
+    display: grid;
+    grid-template-columns: 1;
+    text-align: center;
+    height: 350px;
+    border-radius: 5%;
+}
+
+#card1 img{
+    width: 100%;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+}
+
+#card1 button{
+    background-color: #009688;
+    color: white;
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    border: 0;
+   
+}
+
+#card1 button:hover{
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1150px) {
+    
     
 }
