@@ -4,8 +4,7 @@ const { getAllRegistrations, addNewRegistration } = require('../controllers/regi
 const registerRouter = express.Router();
 
 registerRouter.get("/registrations", getAllRegistrations);
-registerRouter.post("/add/customer", addNewRegistration);
-registerRouter.post("/add/doctor", addNewRegistration);
+registerRouter.post("/add/user", addNewRegistration);
 
 module.exports = {
     registerRouter

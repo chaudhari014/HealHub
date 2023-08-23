@@ -43,7 +43,7 @@ function Navbar() {
               <Link to={"/"}>Lab Tests</Link>
             </li>
             <li>
-              <Link className="loginButton" to={"/signin"}>
+              <Link className="loginButton" to={"/signup"}>
                 <button>Login</button>
               </Link>
             </li>

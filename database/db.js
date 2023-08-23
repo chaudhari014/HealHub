@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-const connect = mongoose.connect("mongodb+srv://thesujalogy:thesujalogy@atlascluster.ezemj2a.mongodb.net/?retryWrites=true&w=majority");
+require("dotenv").config();
+const connection = mongoose.connect(process.env.mongoURL);
 module.export = {
-    connect
+    connection
 }
