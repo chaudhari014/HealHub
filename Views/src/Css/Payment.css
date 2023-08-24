@@ -1,0 +1,115 @@
+.card-element-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.card-element-container>h3{
+  text-align: center;
+} 
+
+.custom-card-element label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.custom-card-element{
+  padding: 10px;
+}
+
+.custom-card-element .card-number-input,
+.custom-card-element .expiration-input,
+.custom-card-element .cvv-input {
+  margin-bottom: 10px;
+}
+
+.custom-card-element .StripeElement {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.custom-card-element .StripeElement--focus {
+  border-color: #007bff;
+}
+.paymentForm{
+  display: flex;
+  justify-content: center;
+  /* border:1px solid black; */
+  padding-bottom: 50px;
+  padding-top: 10px;
+  background-color: #f0f0f5;
+  gap: 1px;
+  
+} 
+.payOption{
+  padding:10px ;
+  background-color:white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  text-align: center;
+  /* border:1px solid red; */
+}
+.payOption>div:first-child{
+  padding: 10px;
+  font-size: 20px;
+  color: blue;
+}
+.payOption li{
+ 
+  border-bottom: 1px solid black;
+  list-style: none;
+  text-decoration: none;
+  padding: 20px;
+  cursor: pointer;
+    padding: 10px; /* Padding for each list item */
+    border-radius: 5px; /* Rounded corners for each list item */
+    margin-bottom: 10px; /* Spacing between list items */
+    display: flex; /* Display items in a flex container */
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Distribute space evenly between items */
+  /* border: 1px solid black; */
+}
+.cardForm{
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background: white;
+  border:1px solid #f0f0f5;
+  width: 30%;
+  padding-left: 50px;
+  padding-top: 10px;
+  padding-left: 15px;
+}
+.selected{
+  color: #007bff; 
+  background-color: #f0f0f0; 
+  border-radius: 5px;
+   padding: 5px 10px; 
+  /* border: 0.1px solid #007bff; */
+  transition: background-color 0.3s, color 0.3s;
+  margin-left: 10px;
+   
+}
+.selected:before{
+  content: "";
+  width: 6px;
+  height: 100%;
+  background-color: blue;
+}
+.PayBtn>button{
+  display: block;
+  border: none;
+  font-size: 20px;
+  margin-left: 42%;
+  padding: 10px 30px;
+  background-color: #4483c7;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 1s;
+}
+.PayBtn>button:hover{
+  background-color: #06386d;
+}
+
+
+
