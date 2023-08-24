@@ -1,6 +1,6 @@
-import { Cards, RoundCards } from "../components";
+import { Cards, RoundCards, SquareCards } from "../components";
 import { banner01 } from "../images";
-import { cardsData, roundCardData } from "../data";
+import { cardsData, roundCardData, squareCardsData } from "../data";
 import "./Homepage.css";
 
 function Homepage() {
@@ -34,6 +34,11 @@ function Homepage() {
         <p>
           Private online consultations with verified doctors in all specialists
         </p>
+      </div>
+
+      {/* Square Cards */}
+      <div className="SquareCards01">
+        <SquareCards CardDetails={squareCardsData} />
       </div>
     </div>
   );

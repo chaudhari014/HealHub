@@ -1,4 +1,5 @@
 import cardsData from "./cardsdata.json";
 import roundCardData from "./roundCardData.json";
-
-export { cardsData, roundCardData };
+import squareCardsData from "./squareCardsData.json"
+ 
+export { cardsData, roundCardData,squareCardsData };

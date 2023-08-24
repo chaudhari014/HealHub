@@ -1,0 +1,44 @@
+.IndividualCard {
+  width: 100%;
+}
+
+.IndividualCard div:nth-child(1) {
+  width: 100%;
+}
+
+.IndividualCard img {
+  width: 100%;
+  height: 200px;
+}
+
+.IndividualCard div:nth-child(2) {
+  padding: 15px 10px;
+}
+
+.IndividualCard div:nth-child(2) p:nth-child(1) {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.IndividualCard div:nth-child(2) p:nth-child(2) {
+  font-size: 0.85rem;
+  color: #666464;
+  margin-top: 5px;
+  line-height: 18px;
+}
+
+@media screen and (max-width: 1160px) {
+  .IndividualCard img {
+    height: 260px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .IndividualCard img {
+    height: 200px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .IndividualCard img {
+    height: 80%;
+  }
+}

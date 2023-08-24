@@ -36,11 +36,22 @@
 
 /* Round Cards */
 .RoundCards01 {
+  width: 100%;
+  margin: auto;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 60px;
   margin-top: 30px;
   margin-bottom: 40px;
+}
+
+/* Square Cards */
+.SquareCards01 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
 }
 
 @media screen and (max-width: 1500px) {
@@ -60,6 +71,10 @@
   .RoundCards01 {
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+  }
+  .SquareCards01 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media screen and (max-width: 1000px) {
@@ -86,7 +101,11 @@
   }
   .RoundCards01 {
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    gap: 30px;
+  }
+  .SquareCards01 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -98,5 +117,15 @@
 @media screen and (max-width: 500px) {
   .CardMain01 div div:nth-child(1) {
     height: 150px;
+  }
+  .CardMain01 div div:nth-child(2) p:nth-child(1) {
+    font-size: large;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .RoundCards01 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 }
