@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
@@ -5,15 +6,15 @@ import { Link } from "react-router-dom";
 import API from "../Api";
 
 function SignIn() {
-  const myApi = `${API}/add/user`;
-
-  const [email, setEmail] = useState("");
+  const myApi = `${API}/login`;
+  const [errorMsg, setErrorMsg] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const handleLogin = async (e) => {
     e.preventDefault();
     
     const payload = {
-      email: email,
+      username: username,
       password: password,
     };
     
@@ -28,10 +29,13 @@ function SignIn() {
 
       if (response.ok) {
         window.alert("login successfully...");
+        window.location.href = "/";
       } else {
-        console.error("Login failed");
+        setErrorMsg("check your Credentials");
+        console.error("check your Credentials");
       }
     } catch (error) {
+      setErrorMsg("technical issue", error);
       console.error("An error occurred:", error);
     }
   };
@@ -44,10 +48,10 @@ function SignIn() {
           E-mail :
           <input
             type="email"
-            name="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            name="username"
+            id="username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
           />
         </label>
         <label>
