@@ -36,3 +36,21 @@
     font-size: large;
   }
 }
+
+@media screen and (max-width: 450px) {
+  .IndividualCard div:nth-child(2) p {
+    font-size: 100%;
+  }
+  .IndividualCard div:nth-child(2) button {
+    font-size: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .IndividualCard div:nth-child(2) p {
+    font-size: 11px;
+  }
+  .IndividualCard div:nth-child(2) button {
+    font-size: 10px;
+  }
+}
