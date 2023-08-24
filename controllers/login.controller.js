@@ -1,10 +1,20 @@
+const passport = require("passport");
+const { RegisterModel } = require("../Models/register.model")
+
 const loginUser = (req, res) => {
-    const {email, password} = req.body;
-    try {
-        
-    } catch (error) {
-        
-    }
+    const user = new RegisterModel({
+        username : req.body.username,
+        password : req.body.password
+    });
+    req.login(user, (err)=>{
+        if(err) {
+            console.log(err);
+        }else {
+            passport.authenticate("local")(req,res,()=>{
+                res.json({Message : "login successfully..."})
+            });
+        }
+    });
 }
 
 module.exports = {

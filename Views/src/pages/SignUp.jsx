@@ -5,10 +5,10 @@ import API from "../Api";
 import { Link } from "react-router-dom";
 
 function SignUp() {
-    const myApi = `${API}/add/user`
+  const myApi = `${API}/add/user`;
   const [userData, setUserData] = useState({
+    name: "",
     username: "",
-    email: "",
     password: "",
   });
 
@@ -16,6 +16,12 @@ function SignUp() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!userData.name || !userData.username || !userData.password) {
+      setErrorMsg("Please fill in all fields.");
+      return;
+    }
+
     try {
       const response = await fetch(myApi, {
         method: "POST",
@@ -24,12 +30,16 @@ function SignUp() {
         },
         body: JSON.stringify(userData),
       });
+      console.log(response);
       if (response.status === 200) {
         alert("Signup Successful!...");
+        window.location.href = "/";
       } else if (response.status === 409) {
-        alert("user already exist...");
+        alert("User already exists. Please login...");
+        window.location.href = "/signin";
       } else {
-        setErrorMsg("Please check your email or password");
+        setErrorMsg("Please check your Email or password");
+        window.location.href = "/signup";
       }
     } catch (error) {
       setErrorMsg("Please try again later");
@@ -41,24 +51,24 @@ function SignUp() {
       <h2>Register User</h2>
       <form onSubmit={handleSubmit}>
         <label>
-          Username :
+          name :
           <input
             type="text"
-            name="username"
-            id="username"
-            value={userData.username}
-            onChange={(e) => setUserData({ ...userData, username: e.target.value })}
+            name="name"
+            id="name"
+            value={userData.name}
+            onChange={(e) => setUserData({ ...userData, name: e.target.value })}
           />
         </label>
         <label>
           E-mail :
           <input
             type="email"
-            name="email"
-            id="email"
-            value={userData.email}
+            name="username"
+            id="username"
+            value={userData.username}
             onChange={(e) =>
-              setUserData({ ...userData, email: e.target.value })
+              setUserData({ ...userData, username: e.target.value })
             }
           />
         </label>
