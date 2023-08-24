@@ -27,6 +27,14 @@ function Homepage() {
       <div className="RoundCards01">
         <RoundCards CardDetails={roundCardData} />
       </div>
+
+      {/* Title */}
+      <div className="Title">
+        <p>Consult top doctors online for any health concern</p>
+        <p>
+          Private online consultations with verified doctors in all specialists
+        </p>
+      </div>
     </div>
   );
 }
