@@ -99,7 +99,7 @@ function Navbar() {
                 className="loginButton"
                 to={"/signin"}
               >
-                <button>Login</button> 
+                <button>Login</button>
               </Link>
             </li>
           </ul>

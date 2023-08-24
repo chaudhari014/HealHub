@@ -1,11 +1,11 @@
-import "./Footer.css";
+import styles from "./Footer.module.css";
 import { logoImage } from "../images";
 
 function Footer() {
   return (
-    <footer className="Footer">
+    <footer className={styles.Footer}>
       {/* 1 */}
-      <div className="footer01">
+      <div className={styles.footer01}>
         <div>
           <h4>Practo</h4>
           <p>About</p>
@@ -75,12 +75,14 @@ function Footer() {
       </div>
 
       {/* 2 */}
-      <div className="footer02">
+      <div className={styles.footer02}>
         <img src={logoImage} alt="logo" />
       </div>
 
       {/* 3 */}
-      <div className="footer03">Copyright © 2017, Practo. All rights reserved</div>
+      <div className={styles.footer03}>
+        Copyright © 2017, Practo. All rights reserved
+      </div>
     </footer>
   );
 }

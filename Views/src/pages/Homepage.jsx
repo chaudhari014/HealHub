@@ -1,7 +1,7 @@
-import { Cards } from "../components";
+import { Cards, RoundCards } from "../components";
 import { banner01 } from "../images";
+import { cardsData, roundCardData } from "../data";
 import "./Homepage.css";
-import CardDetails01 from "../data/cardsdata.json";
 
 function Homepage() {
   return (
@@ -12,7 +12,28 @@ function Homepage() {
       </div>
       {/* Cards */}
       <div className="CardMain01">
-        <Cards CardDetails={CardDetails01} />
+        <Cards CardDetails={cardsData} />
+      </div>
+
+      {/* Title */}
+      <div className="Title">
+        <p>Consult top doctors online for any health concern</p>
+        <p>
+          Private online consultations with verified doctors in all specialists
+        </p>
+      </div>
+
+      {/* Round Card */}
+      <div className="RoundCards01">
+        <RoundCards CardDetails={roundCardData} />
+      </div>
+
+      {/* Title */}
+      <div className="Title">
+        <p>Consult top doctors online for any health concern</p>
+        <p>
+          Private online consultations with verified doctors in all specialists
+        </p>
       </div>
     </div>
   );
