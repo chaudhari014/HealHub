@@ -3,10 +3,13 @@
   overflow: hidden;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
+
 .IndividualCard div:nth-child(1) {
-  height: 28vh;
+  height: 200px;
   overflow: hidden;
+  object-fit: contain;
 }
+
 .IndividualCard img {
   width: 100%;
 }
@@ -18,7 +21,7 @@
 
 .IndividualCard div:nth-child(2) p:nth-child(1) {
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 22px;
 }
 
 .IndividualCard div:nth-child(2) p:nth-child(2) {
