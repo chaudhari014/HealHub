@@ -3,7 +3,6 @@ import { Routes, Route } from "react-router-dom";
 import { Homepage, FindDoctors, Services, VideoConsult, SignIn } from "./pages";
 import { Navbar, Footer } from "./components";
 import SignUp from "./pages/SignUp";
-import Payment from "./pages/Payment";
 
 function App() {
   return (
@@ -16,7 +15,6 @@ function App() {
         <Route path="/video_consult" element={<VideoConsult />}></Route>
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/pay" element={<Payment />} />
 
       </Routes>
       <Footer />
