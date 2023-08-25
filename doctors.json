@@ -1,0 +1,142 @@
+[
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            "09:00",
+            "12:00",
+            "03:00",
+            "06:00"
+        ],
+        "name": "Dr. Alice Johnson",
+        "email": "alice.johnson@example.com",
+        "Speciality": "Pediatrics",
+        "description": "Caring pediatrician",
+        "rating": 4.3
+    },
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            "12:00",
+            "03:00",
+            "06:00",
+            "09:00"
+        ],
+        "name": "Dr. Robert Smith",
+        "email": "robert.smith@example.com",
+        "Speciality": "Orthopedics",
+        "description": "Expert orthopedic surgeon",
+        "rating": 4.8
+    },
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            "03:00",
+            "06:00",
+            "09:00",
+            "12:00"
+        ],
+        "name": "Dr. Emily Williams",
+        "email": "emily.williams@example.com",
+        "Speciality": "Dermatology",
+        "description": "Skilled dermatologist",
+        "rating": 4.2
+    },
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            "06:00",
+            "09:00",
+            "12:00",
+            "03:00"
+        ],
+        "name": "Dr. Michael Brown",
+        "email": "michael.brown@example.com",
+        "Speciality": "Cardiology",
+        "description": "Heart specialist",
+        "rating": 4.6
+    },
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            "09:00",
+            "03:00",
+            "06:00",
+            "12:00"
+        ],
+        "name": "Dr. Jennifer Davis",
+        "email": "jennifer.davis@example.com",
+        "Speciality": "Gynecology",
+        "description": "Experienced gynecologist",
+        "rating": 4.5
+    },
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            "03:00",
+            "06:00",
+            "12:00",
+            "09:00"
+        ],
+        "name": "Dr. John Anderson",
+        "email": "john.anderson@example.com",
+        "Speciality": "Neurology",
+        "description": "Neurological expert",
+        "rating": 4.7
+    },
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            "06:00",
+            "12:00",
+            "09:00",
+            "03:00"
+        ],
+        "name": "Dr. Maria Martinez",
+        "email": "maria.martinez@example.com",
+        "Speciality": "Ophthalmology",
+        "description": "Eye care specialist",
+        "rating": 4.1
+    },
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            "09:00",
+            "06:00",
+            "03:00",
+            "12:00"
+        ],
+        "name": "Dr. David White",
+        "email": "david.white@example.com",
+        "Speciality": "ENT",
+        "description": "Ear, nose, and throat doctor",
+        "rating": 4.9
+    },
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            "03:00",
+            "12:00",
+            "06:00",
+            "09:00"
+        ],
+        "name": "Dr. Sarah Taylor",
+        "email": "sarah.taylor@example.com",
+        "Speciality": "Internal Medicine",
+        "description": "Comprehensive internist",
+        "rating": 4.4
+    },
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            "12:00",
+            "06:00",
+            "09:00",
+            "03:00"
+        ],
+        "name": "Dr. Christopher Lee",
+        "email": "christopher.lee@example.com",
+        "Speciality": "Surgery",
+        "description": "Skilled surgeon",
+        "rating": 4.0
+    }
+]

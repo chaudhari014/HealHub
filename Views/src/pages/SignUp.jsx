@@ -1,8 +1,12 @@
+/* eslint-disable no-unused-vars */
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 // eslint-disable-next-line no-unused-vars
 import API from "../Api";
 import { Link } from "react-router-dom";
+import { FcGoogle } from "react-icons/fc";
+import { logoImage } from "../images";
+import "../../public/signin/signin.css";
 
 function SignUp() {
   const myApi = `${API}/add/user`;
@@ -32,6 +36,7 @@ function SignUp() {
       });
       console.log(response);
       if (response.status === 200) {
+        localStorage.setItem("user", userData.name);
         alert("Signup Successful!...");
         window.location.href = "/";
       } else if (response.status === 409) {
@@ -47,47 +52,70 @@ function SignUp() {
   };
 
   return (
-    <div className="Register_container">
-      <h2>Register User</h2>
-      <form onSubmit={handleSubmit}>
-        <label>
-          name :
-          <input
-            type="text"
-            name="name"
-            id="name"
-            value={userData.name}
-            onChange={(e) => setUserData({ ...userData, name: e.target.value })}
-          />
-        </label>
-        <label>
-          E-mail :
-          <input
-            type="email"
-            name="username"
-            id="username"
-            value={userData.username}
-            onChange={(e) =>
-              setUserData({ ...userData, username: e.target.value })
-            }
-          />
-        </label>
-        <label>
-          Password :
-          <input
-            type="password"
-            name="password"
-            id="password"
-            value={userData.password}
-            onChange={(e) =>
-              setUserData({ ...userData, password: e.target.value })
-            }
-          />
-        </label>
-        {<h4>{errorMsg && <p>{errorMsg}</p>}</h4>}
-        <button type="submit">Register</button>
-        <Link to={"/signin"}>Login</Link>
-      </form>
+    <div className="container">
+      <div className="left_side">
+        <form onSubmit={handleSubmit}>
+          <h3>Register</h3>
+          <label>
+            Name{" "}
+            <input
+              type="text"
+              name="name"
+              id="name"
+              value={userData.name}
+              placeholder="Your Full Name"
+              onChange={(e) =>
+                setUserData({ ...userData, name: e.target.value })
+              }
+            />
+          </label>
+          <label>
+            E-mail{" "}
+            <input
+              type="email"
+              name="username"
+              id="username"
+              value={userData.username}
+              placeholder="Your E-mail"
+              onChange={(e) =>
+                setUserData({ ...userData, username: e.target.value })
+              }
+            />
+          </label>
+          <label>
+            Password{" "}
+            <input
+              type="password"
+              name="password"
+              id="password"
+              value={userData.password}
+              placeholder="Your Password"
+              onChange={(e) =>
+                setUserData({ ...userData, password: e.target.value })
+              }
+            />
+          </label>
+          {<h4>{errorMsg && <p>{errorMsg}</p>}</h4>}
+          <div>
+            <button type="submit">Register</button>
+            <Link to={"/signin"} className="login_link">
+              Login
+            </Link>
+          </div>
+        </form>
+      </div>
+      <div className="right_side">
+        <div>
+          <img src={logoImage} alt="logo" />
+          <fieldset>
+            <legend>Register With</legend>
+          </fieldset>
+          <button>
+            <FcGoogle />
+          </button>
+          <p>Google</p>
+        </div>
+      </div>
     </div>
   );
 }
