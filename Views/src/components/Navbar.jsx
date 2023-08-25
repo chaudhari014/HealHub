@@ -5,6 +5,9 @@ import "./Navbar.css";
 
 function Navbar() {
   const [barOrTabClicked, setBarOrTabClicked] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+
+  const userName = localStorage.getItem("user");
 
   const handleBarOrTabClicked = () => {
     setBarOrTabClicked(!barOrTabClicked);
@@ -43,9 +46,58 @@ function Navbar() {
               <Link to={"/"}>Lab Tests</Link>
             </li>
             <li>
-              <Link className="loginButton" to={"/signup"}>
-                <button>Login</button>
-              </Link>
+              {userName ? (
+                <div>
+                  <button
+                    className="UserName"
+                    onClick={() => setIsHovered(!isHovered)}
+                  >
+                    {userName}
+                  </button>
+                  {isHovered && (
+                    <div className="HiddenContent">
+                      <ul>
+                        <li>
+                          <Link
+                            onClick={() => setIsHovered(!isHovered)}
+                            to={"/"}
+                          >
+                            My Profile
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            onClick={() => setIsHovered(!isHovered)}
+                            to={"/"}
+                          >
+                            My Appointments
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            onClick={() => setIsHovered(!isHovered)}
+                            to={"/"}
+                          >
+                            My Wallet
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            onClick={() => setIsHovered(!isHovered)}
+                            to={"/"}
+                          >
+                            Logout
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link className="loginButton" to={"/signup"}>
+                  <button>Login</button>
+                </Link>
+              )}
             </li>
           </ul>
         ) : (
