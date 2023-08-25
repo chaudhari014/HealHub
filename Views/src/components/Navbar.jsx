@@ -7,6 +7,7 @@ function Navbar() {
   const [barOrTabClicked, setBarOrTabClicked] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
+  // localStorage.setItem("user", "John Doe");
   const userName = localStorage.getItem("user");
 
   const handleBarOrTabClicked = () => {
