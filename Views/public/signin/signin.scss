@@ -1,0 +1,105 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 30px;
+  .left_side {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    form {
+      h3 {
+        font-size: 25px;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+      padding: 5%;
+      border-radius: 10px;
+      display: grid;
+      text-align: start;
+      justify-content: space-around;
+      gap: 30px;
+      label {
+        font-size: 15px;
+        display: grid;
+        gap: -10px;
+        color: #011224;
+        font-weight: 700;
+        input {
+          width: 440px;
+          border: none;
+          border-bottom: 1px solid #011224;
+          outline: none;
+          text-indent: 4px;
+          font-size: 16px;
+          padding: 10px;
+        }
+        input:hover {
+          border-bottom: 3px solid #011224;
+        }
+      }
+      button {
+        border: 1px solid #000;
+        display: inline-block;
+        width: 90px;
+        height: 40px;
+        position: relative;
+        border-radius: 5px;
+        background-color: #011224;
+        color: white;
+        font-size: 16px;
+      }
+      div {
+        display: flex;
+        // border: 1px solid #000;
+        justify-content: space-between;
+        align-items: center;
+        .login_link {
+          font-size: 16px;
+          letter-spacing: 3px;
+          text-decoration: none;
+          color: #011224;
+        }
+        .login_link:hover {
+          font-weight: 700;
+          color: #136ccb;
+        }
+      }
+    }
+  }
+  .right_side {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    padding: 20px;
+    background-color: #011224;
+    div {
+      flex-direction: column;
+      width: 600px;
+      height: 430px;
+      text-align: center;
+      img {
+        width: 400px;
+      }
+      fieldset {
+        border: none;
+        border-top: 1px solid white;
+        width: 300px;
+        margin: auto;
+        margin-top: 70px;
+        margin-bottom: 10px;
+        legend {
+          color: white;
+          font-size: 14px;
+          padding: 10px;
+        }
+      }
+      button {
+        background: transparent;
+        font-size: 40px;
+        border: none;
+        cursor: pointer;
+      }
+      p {
+        color: white;
+        margin-top: -4px;
+        font-size: 14px;
+      }
+    }
+  }
+}

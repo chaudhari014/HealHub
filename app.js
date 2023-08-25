@@ -9,6 +9,7 @@ const passportLocalMongoose = require("passport-local-mongoose");
 const { connection } = require('./database/db');
 const { registerRouter } = require('./routes/register.routes');
 const { loginRouter } = require('./routes/login.routes');
+const { doctorRouter } = require("./routes/doctor.routes");
 
 const app = express();
 
@@ -26,6 +27,7 @@ app.use(passport.session());
 
 app.use("/", registerRouter);
 app.use("/", loginRouter);
+app.use("/", doctorRouter);
 
 const port = process.env.PORT;
 app.listen(port, async () => {
