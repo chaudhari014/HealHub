@@ -1,0 +1,61 @@
+.SliderDiv {
+  text-align: center;
+  padding: 0 100px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.SliderDiv > p {
+  font-size: 30px;
+  font-weight: 600;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #3f3e3e;
+  margin-bottom: 30px;
+}
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.review {
+  margin: 0 25%;
+  letter-spacing: 0.6px;
+}
+.user {
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: small;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.slider-button {
+  border: none;
+  font-size: larger;
+  color: rgb(58, 55, 55);
+  background-color: white;
+  cursor: pointer;
+}
+.fa-circle-user {
+  color: rgb(54, 54, 54);
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 1200px) {
+  .SliderDiv {
+    padding: 0 0;
+  }
+
+  .review {
+    margin: 0 10%;
+    letter-spacing: 0.6px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .SliderDiv {
+    padding: 0 0;
+  }
+
+  .review {
+    margin: 0 10%;
+    letter-spacing: 0.6px;
+  }
+}

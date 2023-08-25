@@ -23,6 +23,10 @@
 }
 
 /* Titles */
+.Title {
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
 
 .Title p:nth-child(1) {
   font-size: x-large;
@@ -52,6 +56,10 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
+}
+
+hr {
+  color: rgb(65, 63, 63);
 }
 
 @media screen and (max-width: 1500px) {

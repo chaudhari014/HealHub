@@ -1,17 +1,22 @@
-import { Cards, RoundCards, SquareCards } from "../components";
+import {
+  Cards,
+  RoundCards,
+  SquareCards,
+  Articles,
+  Slider,
+} from "../components";
 import { banner01 } from "../images";
-import { cardsData, roundCardData, squareCardsData } from "../data";
+import { cardsData, roundCardData, squareCardsData, sliderData } from "../data";
 import "./Homepage.css";
 
 function Homepage() {
   return (
     <div className="HomePage">
-
       {/* Add 01 */}
       <div className="add01">
         <img src={banner01} alt="add01" />
       </div>
-      
+
       {/* Cards */}
       <div className="CardMain01">
         <Cards CardDetails={cardsData} />
@@ -42,6 +47,14 @@ function Homepage() {
       <div className="SquareCards01">
         <SquareCards CardDetails={squareCardsData} />
       </div>
+
+      <hr />
+      {/* Articles */}
+      <Articles />
+      <hr />
+
+      {/* Slider */}
+      <Slider texts={sliderData} />
     </div>
   );
 }
