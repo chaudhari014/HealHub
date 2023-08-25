@@ -5,6 +5,8 @@ import "./Navbar.css";
 
 function Navbar() {
   const [barOrTabClicked, setBarOrTabClicked] = useState(false);
+  const name = localStorage.getItem("user");
+  const userName = name.split(" ");
 
   const handleBarOrTabClicked = () => {
     setBarOrTabClicked(!barOrTabClicked);
@@ -43,9 +45,13 @@ function Navbar() {
               <Link to={"/"}>Lab Tests</Link>
             </li>
             <li>
-              <Link className="loginButton" to={"/signup"}>
-                <button>Login</button>
-              </Link>
+              {name ? (
+                <h3 className="userName">{userName[0]}</h3>
+              ) : (
+                <Link className="loginButton" to={"/signup"}>
+                  <button>Login</button>
+                </Link>
+              )}
             </li>
           </ul>
         ) : (
@@ -100,6 +106,15 @@ function Navbar() {
                 to={"/signin"}
               >
                 <button>Login</button>
+              </Link>
+            </li>
+            <li>
+              <Link
+                onClick={handleBarOrTabClicked}
+                className="loginButton"
+                to={"/"}
+              >
+                <button>Logout</button>
               </Link>
             </li>
           </ul>
