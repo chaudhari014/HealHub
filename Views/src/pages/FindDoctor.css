@@ -1,0 +1,31 @@
+#doc{
+    
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin: 4rem;
+}
+
+#doc #card{
+    text-align: left;
+    margin:10px 10px 10px 10px;
+}
+
+#doc #card img{
+    margin: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+
+#doc #card button{
+    width: 200px;
+    background-color: #FFA000;
+    font-size: medium;
+    color: white;
+}
+
+#doc #card button:hover{
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+}
