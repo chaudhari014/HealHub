@@ -95,7 +95,7 @@ function Navbar() {
                   )}
                 </div>
               ) : (
-                <Link className="loginButton" to={"/signup"}>
+                <Link className="loginButton" to={"/signin"}>
                   <button>Login</button>
                 </Link>
               )}
