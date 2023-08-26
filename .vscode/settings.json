@@ -1,6 +1,9 @@
 {
     "cSpell.words": [
         "healhub",
+        "hgetall",
+        "hmset",
+        "hset",
         "signin",
         "thesujalogy"
     ]

@@ -34,9 +34,11 @@ function SignUp() {
         },
         body: JSON.stringify(userData),
       });
-      console.log(response);
       if (response.status === 200) {
+        const data = await response.json();
+        // console.log(data);
         localStorage.setItem("user", userData.name);
+        localStorage.setItem("userID", data.userID);
         alert("Signup Successful!...");
         window.location.href = "/";
       } else if (response.status === 409) {

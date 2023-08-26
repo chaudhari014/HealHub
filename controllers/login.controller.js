@@ -11,7 +11,7 @@ const loginUser = (req, res) => {
             console.log(err);
         }else {
             passport.authenticate("local")(req,res,()=>{
-                res.json({Message : "login successfully..."})
+                res.json({ Message : "login successfully...", userID: user._id, user : user });
             });
         }
     });
