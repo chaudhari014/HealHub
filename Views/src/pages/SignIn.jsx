@@ -30,6 +30,12 @@ function SignIn() {
       });
 
       if (response.ok) {
+        const data = await response.json();
+        console.log(data);
+        localStorage.setItem("user", data.name);
+        localStorage.setItem("role", data.role);
+        localStorage.setItem("userID", data.userID);
+        localStorage.setItem("email", data.email);
         window.alert("login successfully...");
         window.location.href = "/";
       } else {

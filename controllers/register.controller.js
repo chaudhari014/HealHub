@@ -19,7 +19,7 @@ const addNewRegistration = async (req, res) => {
       req.body.password,
       async (err, user) => {
         if (err) {
-          if (err.name === "UserExistsError") {
+          if (err.username === "UserExistsError") {
             res.status(409).json({ error: "Username already exists" });
           } else {
             console.log(err);
@@ -27,7 +27,7 @@ const addNewRegistration = async (req, res) => {
           }
         } else {
           passport.authenticate("local")(req, res, () => {
-           res.json({ Message : "Register successfully...", userID: user._id });
+           res.json({ Message : "Register successfully...", userID: user._id, data: user });
           });
         }
       }
