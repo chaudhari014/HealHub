@@ -148,3 +148,23 @@
     width: 50%;
     border-color: none;
 }
+#detail{
+   width: 20%;
+   text-align: center;
+   font-family: sans-serif;
+   margin-right: 10%;
+}
+.image img{
+  width:100%;
+  /* height: 200px; */
+}
+#detail button{
+  border: none;
+  font-size: 20px;
+  padding: 10px 30px;
+  background-color: rgb(223, 61, 61);
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 1s;
+}
