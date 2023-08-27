@@ -1,4 +1,22 @@
 const { AppointModel } = require("../Models/appointment.model");
+const  stripe=require("stripe")("sk_test_51NiVoJSDWqjglPyj5JOYqp0fgKligKcfsCHYnY8Su9dHgcc706bK7Ez5Lfxca4mXTTnNHrGHgiimN8UMmR3CeyER00qbdhwM6Y")
+
+let paymentSuccess = false;
+StatusPayment= async (req,res)=>{
+  const { paymentMethodId } = req.body;
+  console.log(paymentMethodId)
+   try {
+    const paymentIntent = await stripe.paymentIntents.create({
+      amount: 10000,
+       currency: 'usd',
+      payment_method: paymentMethodId,
+    });
+    paymentSuccess = true;
+    res.json( {success:true })
+   } catch (error) {
+    res.send(error)
+   }
+}
 
 const addAppointment = async (req, res) => {
   const { time, userId, docId } = req.body;
@@ -12,9 +30,10 @@ const addAppointment = async (req, res) => {
     });
 
     // Payment confirmed logic { ...here }
+   
+ 
 
-    const paymentSuccess = true;
-
+    
     if (paymentSuccess) {
       status = true;
       addAppoint.status = status;
@@ -35,6 +54,7 @@ const addAppointment = async (req, res) => {
 
 module.exports = {
   addAppointment,
+  StatusPayment
 };
 
 // const addAppointment = async (req, res) => {
