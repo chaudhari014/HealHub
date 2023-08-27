@@ -1,19 +1,23 @@
 #doc{
-    
+    width: 80%;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    margin: 4rem;
+    grid-template-columns: repeat(3,1fr);
+    margin: 5% 10% 10% 10%;
+    
 }
 
 #doc #card{
+    width: 90%;
     text-align: left;
     margin:10px 10px 10px 10px;
+    height: 500px;
 }
 
 #doc #card img{
-    margin: 0;
+    width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    height: 350px;
 }
 
 
