@@ -10,7 +10,7 @@ const { connection } = require('./database/db');
 const { registerRouter } = require('./routes/register.routes');
 const { loginRouter } = require('./routes/login.routes');
 const { doctorRouter } = require("./routes/doctor.routes");
-
+const {paymentStatus} =require("./routes/payment.routes")
 const app = express();
 
 app.use(express.json());
@@ -28,7 +28,7 @@ app.use(passport.session());
 app.use("/", registerRouter);
 app.use("/", loginRouter);
 app.use("/", doctorRouter);
-
+app.use("/", paymentStatus)
 const port = process.env.PORT;
 app.listen(port, async () => {
     try {

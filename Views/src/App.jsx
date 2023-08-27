@@ -9,8 +9,9 @@ import {
   SignUp,
 } from "./pages";
 import { Navbar, Footer } from "./components";
+import Payment from "./pages/Payment"
 
-function App() {
+function App(){
   return (
     <div className="App">
       <Navbar />
@@ -21,8 +22,9 @@ function App() {
         <Route path="/video_consult" element={<VideoConsult />}></Route>
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/pay" element={<Payment/>}/>
       </Routes>
-      <Footer />
+      <Footer/>
     </div>
   );
 }
