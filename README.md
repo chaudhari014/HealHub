@@ -12,14 +12,19 @@ Greetings from the Heal Hub team! We're a passionate group of developers working
 - [@rahul.chaudhari_](https://github.com/chaudhari014)
 - [@rushikesh.chate_](https://github.com/rushichate)
 
-
-
 ## Tech Stack
 
 **Client:** React, Javascript, CSS
 
 **Server:** Node, Express, MongoDB, Mongoose, Javascript, Redis, Socket.io, PassportJS
 
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+`PORT`
+`SECRET`
+`REDIS_HOST` 
+`REDIS_PORT`
 
 ## Startup Commands
 
@@ -31,15 +36,6 @@ For Server:
 ```bash
   npm run dev
 ```
-
-
-## Environment Variables
-
-To run this project, you will need to add the following environment variables to your .env file
-`PORT`
-`SECRET`
-`REDIS_HOST` 
-`REDIS_PORT`
 
 ## Home Page
 Explore the Healthcare Possibilities from Our Homepage! At Heal Hub, our homepage serves as your launchpad to a range of healthcare services. Seamlessly navigate to different routes within our platform – from scheduling appointments to engaging in video consultations. Your journey to accessible and comprehensive healthcare begins here.
