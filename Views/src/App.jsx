@@ -12,7 +12,8 @@ import {
 import { Navbar, Footer } from "./components";
 import RoomPage from "./screens/Room";
 
-function App() {
+
+function App(){
   return (
     <div className="App">
       <Navbar />
@@ -26,7 +27,7 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/appointment" element={<Appointment />} />
       </Routes>
-      <Footer />
+      <Footer/>
     </div>
   );
 }
