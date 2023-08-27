@@ -84,7 +84,14 @@ function Navbar() {
                         </li>
                         <li>
                           <Link
-                            onClick={() => setIsHovered(!isHovered)}
+                            onClick={() => {
+                              localStorage.removeItem("email");
+                              localStorage.removeItem("user");
+                              localStorage.removeItem("role");
+                              localStorage.removeItem("userID");
+                              setIsHovered(!isHovered);
+                              alert("User Logged out Successfully");
+                            }}
                             to={"/"}
                           >
                             Logout
@@ -170,7 +177,14 @@ function Navbar() {
 
                           <li>
                             <Link
-                              onClick={() => setIsHovered(!isHovered)}
+                              onClick={() => {
+                                localStorage.removeItem("email");
+                                localStorage.removeItem("user");
+                                localStorage.removeItem("role");
+                                localStorage.removeItem("userID");
+                                setIsHovered(!isHovered);
+                                alert("User Logged out Successfully");
+                              }}
                               to={"/"}
                             >
                               Logout
