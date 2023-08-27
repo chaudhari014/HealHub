@@ -39,12 +39,12 @@ function PaymentForm() {
           });
           if (response.ok) {
              let  res= await response.json()
-            console.log(res)
+            //console.log(res)
             await new Promise(resolve => setTimeout(resolve, 4000));
             // navigate("/success")
             alert("payment successfully done")
             navigate("/video_consult");
-            localStorage.setItem("statusPayment",true)
+            localStorage.setItem("status",true)
             console.log('Test money transfer successful');
           } else {
             // localStorage.setItem("statusPayment",true)
@@ -146,7 +146,7 @@ function PaymentForm() {
                         </div>
                     </div>
                     <div className='PayBtn'>
-                    <button onClick={handleTestTransfer} >Pay</button>
+                    <button onClick={handleTestTransfer}>Pay</button>
                    {
                     error?<h3>{error}</h3>:""
                    }
