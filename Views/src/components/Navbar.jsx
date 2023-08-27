@@ -95,7 +95,7 @@ function Navbar() {
                   )}
                 </div>
               ) : (
-                <Link className="loginButton" to={"/signup"}>
+                <Link className="loginButton" to={"/signin"}>
                   <button>Login</button>
                 </Link>
               )}
@@ -147,13 +147,45 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <Link
-                onClick={handleBarOrTabClicked}
-                className="loginButton"
-                to={"/signin"}
-              >
-                <button>Login</button>
-              </Link>
+              <li>
+                {userName ? (
+                  <div>
+                    <button
+                      className="UserName"
+                      onClick={() => setIsHovered(!isHovered)}
+                    >
+                      {userName}
+                    </button>
+                    {isHovered && (
+                      <div className="HiddenContent">
+                        <ul>
+                          <li>
+                            <Link
+                              onClick={() => setIsHovered(!isHovered)}
+                              to={"/"}
+                            >
+                              My Profile
+                            </Link>
+                          </li>
+
+                          <li>
+                            <Link
+                              onClick={() => setIsHovered(!isHovered)}
+                              to={"/"}
+                            >
+                              Logout
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link className="loginButton" to={"/signin"}>
+                    <button>Login</button>
+                  </Link>
+                )}
+              </li>
             </li>
           </ul>
         )}

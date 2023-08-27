@@ -1,8 +1,16 @@
+import { Routes, Route } from "react-router-dom";
+import LobbyScreen from "../screens/Lobby";
+// import RoomPage from "../screens/Room";
 
 function VideoConsult() {
   return (
-   <h1>Video Consultant page</h1>
-  )
+    <div>
+      <Routes>
+        <Route path="/" element={<LobbyScreen />} />
+        {/* <Route path="/room/:roomId" element={<RoomPage />} /> */}
+      </Routes>
+    </div>
+  );
 }
 
-export default VideoConsult
+export default VideoConsult;
