@@ -9,7 +9,6 @@ const { connection } = require("./database/db");
 const { registerRouter } = require("./routes/register.routes");
 const { loginRouter } = require("./routes/login.routes");
 const { doctorRouter } = require("./routes/doctor.routes");
-// const { authRouter } = require("./routes/auth.routes");
 const { logoutRouter } = require("./routes/logout.routes");
 
 const app = express();
@@ -28,10 +27,9 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use("/", registerRouter);
 app.use("/", loginRouter);
+app.use("/", registerRouter);
 app.use("/", doctorRouter);
-// app.use("/", authRouter);
 app.use("/", logoutRouter);
 
 const port = process.env.PORT;

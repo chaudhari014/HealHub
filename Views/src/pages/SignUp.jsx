@@ -35,10 +35,12 @@ function SignUp() {
         body: JSON.stringify(userData),
       });
       if (response.status === 200) {
-        const data = await response.json();
-        // console.log(data);
-        localStorage.setItem("user", userData.name);
-        localStorage.setItem("userID", data.userID);
+        const myData = await response.json();
+        console.log(myData);
+        localStorage.setItem("user", myData.data.name);
+        localStorage.setItem("role", myData.data.role);
+        localStorage.setItem("userID", myData.userID);
+        localStorage.setItem("email", myData.data.username);
         alert("Signup Successful!...");
         window.location.href = "/";
       } else if (response.status === 409) {
