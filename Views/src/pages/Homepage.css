@@ -62,7 +62,7 @@ hr {
   color: rgb(65, 63, 63);
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1300px) {
   .CardMain01 {
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;

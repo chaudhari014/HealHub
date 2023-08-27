@@ -7,9 +7,11 @@ import {
   VideoConsult,
   SignIn,
   SignUp,
+  Appointment,
 } from "./pages";
 import { Navbar, Footer } from "./components";
-import Payment from "./pages/Payment"
+import RoomPage from "./screens/Room";
+
 
 function App(){
   return (
@@ -19,10 +21,11 @@ function App(){
         <Route path="/" element={<Homepage />}></Route>
         <Route path="/find_doctors" element={<FindDoctors />}></Route>
         <Route path="/services" element={<Services />}></Route>
-        <Route path="/video_consult" element={<VideoConsult />}></Route>
+        <Route path="/video_consult/*" element={<VideoConsult />}></Route>
+        <Route path="/room/:id" element={<RoomPage />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/pay" element={<Payment/>}/>
+        <Route path="/appointment" element={<Appointment />} />
       </Routes>
       <Footer/>
     </div>

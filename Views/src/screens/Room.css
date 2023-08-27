@@ -1,0 +1,64 @@
+.RoomPage {
+  margin: 0 5%;
+}
+
+.RoomPage .status .ended-message {
+  text-align: center;
+  margin: 10% 0;
+  font-size: x-large;
+}
+.RoomPage .status .ended-message button {
+  padding: 10px;
+  margin-top: 1%;
+  border: none;
+  border-radius: 5px;
+  background-color: #011224;
+  color: white;
+  font-size: large;
+}
+.RoomPage .status .connected-as {
+  text-align: center;
+  padding: 15px 0;
+}
+
+.RoomPage .controls {
+  text-align: center;
+}
+
+.RoomPage .controls button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #011224;
+  color: white;
+  font-size: large;
+  margin: 5px 15px;
+}
+.RoomPage .stream-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.RoomPage .stream-container .stream h1 {
+  text-align: center;
+  margin-top: 0px;
+}
+.RoomPage .stream-container .stream button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #011224;
+  color: white;
+  font-size: large;
+  margin: 5px 15px;
+}
+.RoomPage .stream-container .stream .end-button {
+  display: flex;
+  justify-content: flex-end;
+}
+.RoomPage .stream-container .stream .end-button button {
+  background-color: rgb(129, 0, 0);
+}
