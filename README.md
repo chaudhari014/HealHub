@@ -36,12 +36,14 @@ For Server:
 ## Environment Variables
 
 To run this project, you will need to add the following environment variables to your .env file
-
 `PORT`
 `SECRET`
 `REDIS_HOST` 
 `REDIS_PORT`
+
 ## Home Page
+Explore the Healthcare Possibilities from Our Homepage! At Heal Hub, our homepage serves as your launchpad to a range of healthcare services. Seamlessly navigate to different routes within our platform – from scheduling appointments to engaging in video consultations. Your journey to accessible and comprehensive healthcare begins here.
+
 ![Home Page](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
 ## SignUp Page
