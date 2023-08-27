@@ -11,7 +11,7 @@ import {
 } from "./pages";
 import { Navbar, Footer } from "./components";
 import RoomPage from "./screens/Room";
-
+import Payment from "./pages/Payment";
 
 function App(){
   return (
@@ -26,6 +26,8 @@ function App(){
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/appointment" element={<Appointment />} />
+        <Route path="/pay" element={<Payment/>} />
+
       </Routes>
       <Footer/>
     </div>

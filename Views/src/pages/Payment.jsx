@@ -61,11 +61,28 @@ function PaymentForm() {
     const handleOptionClick = (value) => {
       setOption(value);
     };
+
+    let appotmentDetail=localStorage.getItem("doctoreDetail")|| [{image:"https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/57.png",
+  price:499,
+  time:"7:00pm-7:30pm",
+  name:"MS Dhoni"
+}]
     return (
         <>
         {
           paymetntStatus?<>
             <div className='paymentForm'>
+              <div id='detail'>
+                <div className='image'> 
+                  <img src={appotmentDetail[0].image} alt="" />
+                </div>
+                <h2>Name:{appotmentDetail[0].name}</h2>
+                <h3>Time:{appotmentDetail[0].time}</h3>
+                <h3>Price:{appotmentDetail[0].price} ₹</h3>
+                <button onClick={()=>
+                  window.confirm("Are You Sure You Want to Cancel Appotment")?
+                  navigate("/find_doctors"):""}>cancel Appotment</button>
+              </div>
                 <div className='payOption'>
                 <div>
                 Payment option
@@ -85,7 +102,7 @@ function PaymentForm() {
                         <div className="custom-card-element">
                           <label>amount</label>
                           <div className="card-number-input amount">
-                            <input type="text"  placeholder='amount'/>
+                            <input type="text"  placeholder='amount' value={appotmentDetail[0].price} disabled={paymetntStatus}/>
                           </div>
                             <label>Card Number</label>
                             <div className="card-number-input">
