@@ -9,6 +9,7 @@ const { connection } = require("./database/db");
 const { registerRouter } = require("./routes/register.routes");
 const { loginRouter } = require("./routes/login.routes");
 const { doctorRouter } = require("./routes/doctor.routes");
+const {paymentStatus} =require("./routes/payment.routes")
 const { logoutRouter } = require("./routes/logout.routes");
 
 // k start
@@ -54,9 +55,7 @@ io.on("connection", (socket) => {
     io.to(room).emit("call:end");
   });
 });
-
 //k end
-
 const app = express();
 
 app.use(express.json());
@@ -72,12 +71,11 @@ app.use(
 );
 app.use(passport.initialize());
 app.use(passport.session());
-
 app.use("/", loginRouter);
 app.use("/", registerRouter);
 app.use("/", doctorRouter);
+app.use("/", paymentStatus)
 app.use("/", logoutRouter);
-
 const port = process.env.PORT;
 app.listen(port, async () => {
   try {
