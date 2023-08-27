@@ -1,9 +1,29 @@
 import React from "react"
 import './Service.css'
-import FindDoctors from "./FindDoctors"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 function Services() {
+
+    const navigate = useNavigate();
+    function goToGyne(){
+        navigate('/find_doctors', {state:{id:"Gynecology"}})
+    }
+    function goToSexology(){
+        navigate('/find_doctors', {state:{id:"Sexology"}})
+    }
+    function goToGeneralPhysician(){
+        navigate('/find_doctors', {state:{id:"General Physician"}})
+    }
+    function goToDermatology(){
+        navigate('/find_doctors', {state:{id:"Dermatology"}})
+    }
+    function goToPsychiatry(){
+        navigate('/find_doctors', {state:{id:"Psychiatry"}})
+    }
+    function goToStomach(){
+        navigate('/find_doctors', {state:{id:"Stomach"}})
+    }
+
   return (
     <>
     <div id="banner">
@@ -25,37 +45,42 @@ function Services() {
             <img src="https://www.practo.com/consult/static/images/top-speciality-gynaecologist.svg" alt=""/>
             <h3>Gynaecology</h3>
             <p>₹599</p>
-            <a href="/find_doctors"><button>Consult now</button></a>
+           {/* <Link  to={{ pathname: '/find_doctors', state:"1"}}><button>Consult now</button></Link> */}
+           {/* <a href="/find_doctors"><button>Consult now</button></a> */}
+           <button onClick={goToGyne}>Consult now</button>
+            {/* <Link to={{pathname:'/find_doctors', state:data1}}><button>Consult now</button></Link> */}
         </div>
         <div id='card'>
             <img src="https://www.practo.com/consult/static/images/top-speciality-sexology.svg" alt="" />
             <h3>Sexology</h3>
             <p>₹499</p>
-            <a href="/find_doctors"><button>Consult now</button></a>
+            {/* <a href="/find_doctors"><button>Consult now</button></a> */}
+            {/* <Link  to={{ pathname: '/find_doctors', state: {data:"2"}}}><button>Consult now</button></Link> */}
+            <button onClick={goToSexology}>Consult now</button>
         </div>
         <div id='card'>
             <img src="https://www.practo.com/consult/static/images/top-speciality-gp.svg" alt="" />
             <h3>General Physician</h3>
             <p>₹399</p>
-            <a href="/find_doctors"><button>Consult now</button></a>
+            <button onClick={goToGeneralPhysician}>Consult now</button>
         </div>
         <div id='card'>
             <img src="https://www.practo.com/consult/static/images/top-speciality-dermatologist.svg" alt="" />
             <h3>Dermatology</h3>
             <p>₹499</p>
-            <a href="/find_doctors"><button>Consult now</button></a>
+            <button onClick={goToDermatology}>Consult now</button>
         </div>
         <div id='card'>
             <img src="https://www.practo.com/consult/static/images/top-speciality-psychiatric.svg" alt="" />
             <h3>Psychiatry</h3>
             <p>₹999</p>
-            <a href="/find_doctors"><button>Consult now</button></a>
+            <button onClick={goToPsychiatry}>Consult now</button>
         </div>
         <div id='card'>
             <img src="https://www.practo.com/consult/static/images/top-speciality-stomach.svg" alt="" />
             <h3>Stomach</h3>
             <p>₹299</p>
-            <a href="/find_doctors"><button>Consult now</button></a>
+            <button onClick={goToStomach}>Consult now</button>
         </div>
     </div>
       <h1>Common Health Concerns</h1>
