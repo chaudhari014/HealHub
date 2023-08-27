@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./FindDoctor.css";
 import API from "../Api";
 import { useLocation,useNavigate } from "react-router-dom";
@@ -6,6 +6,7 @@ import { useLocation,useNavigate } from "react-router-dom";
 function FindDoctors() {
   const location = useLocation();
   const expert = location.state.id;
+  console.log(expert)
 
   const navigate = useNavigate();
 
@@ -20,23 +21,27 @@ function FindDoctors() {
   
   const [docData, setdocData] = useState([])
   useEffect(()=>{
-    fetch(`${API}/doctors`)
-    .then((res)=>res.json())
-    .then((myData)=>{
-      const ourData = myData.data
-      const fixData = ourData.filter((elem)=> elem.Speciality==expert)
-      setdocData(fixData)
-    })
-    .catch((error)=>{
-      console.log(error)
-    })
+    if(expert){
+      fetch(`${API}/doctors`)
+      .then((res)=>res.json())
+      .then((myData)=>{
+        const ourData = myData.data
+        const fixData = ourData.filter((elem)=> elem.Speciality==expert)
+        setdocData(fixData)
+        console.log(ourData);
+      })
+      .catch((error)=>{
+        console.log(error)
+      })
+    }
+    
   },[])
   
   
     
   return (
     <>
-    <h1>Our {expert}</h1>
+    <h1>Our {expert} Doctors</h1>
     <div  id="doc">
      {
       docData.map((el)=>(
