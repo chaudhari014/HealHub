@@ -16,16 +16,70 @@ function Appointment() {
 
   function navigationt1(){
     if(appointDr.length>0){
+      if(appointDr[0].availability[0].t1==true){
+        const myObj = {
+          id:appointDr[0]._id,
+          slot:"t1",
+          time:"9AM-12PM"
+        };
+        localStorage.setItem("docInfo", JSON.stringify(myObj))
+        alert("Booking Appointment 9AM-12PM")
+        navigate('/pay')
+      }else{
+        alert("Doctor is not available at this time slot please choose another")
+      }
+      }
+  }
+
+  function navigationt2(){
+    if(appointDr.length>0){
+      if(appointDr[0].availability[0].t2==true){
       const myObj = {
         id:appointDr[0]._id,
-        slot:"t1",
-        time:"9AM-12PM"
+        slot:"t2",
+        time:"12PM-03PM"
       };
       localStorage.setItem("docInfo", JSON.stringify(myObj))
-      alert("Booking Appointment 9AM-12PM")
-      navigate('')
+      alert("Booking Appointment 12PM-03PM")
+      navigate('/pay')
+    }else{
+      alert("Doctor is not available at this time slot please choose another")
     }
-    
+    }
+  }
+
+  function navigationt3(){
+    if(appointDr.length>0){
+      if(appointDr[0].availability[0].t3==true){
+      const myObj = {
+        id:appointDr[0]._id,
+        slot:"t3",
+        time:"03PM-06PM"
+      };
+      localStorage.setItem("docInfo", JSON.stringify(myObj))
+      alert("Booking Appointment 03AM-06PM")
+      navigate('/pay')
+    }else{
+      alert("Doctor is not available at this time slot please choose another")
+    }
+    }
+  }
+
+  function navigationt4(){
+    if(appointDr.length>0){
+      if(appointDr[0].availability[0].t4==true){
+      const myObj = {
+        id:appointDr[0]._id,
+        slot:"t4",
+        time:"06PM-09PM"
+      };
+      localStorage.setItem("docInfo", JSON.stringify(myObj))
+      alert("Booking Appointment 06PM-09PM")
+      navigate('/pay')
+    }else{
+      alert("Doctor is not available at this time slot please choose another")
+    }
+    }
   }
 
 
@@ -57,33 +111,33 @@ function Appointment() {
   
 
 
-  return <>
-  <h1>Book Appointment</h1>
+  return (<>
+  
   { appointDr.length > 0 &&(
+    <div>
+    <h1>Book Appointment With {appointDr[0].name} </h1>
     <div id="drCard">
-    <img src={appointDr[0].image} alt="" />
+      <div id="img"><img src={appointDr[0].image} alt="" /></div>
     <div id="text">
-      <h1>{appointDr[0].name}</h1>
-      <h2>{appointDr[0].Speciality}</h2>
-      <p>{appointDr[0].description}</p>
-      <p>Email:-{appointDr[0].email}</p>
-      <div id="button1">
+      <h1>A {appointDr[0].Speciality} Expert</h1>
+      <h2>{appointDr[0].description}</h2>
+      <h3>Email:-{appointDr[0].email}</h3>
+      <h3>Appointment Fees:- {appointDr[0].price}/- only</h3>
+      <div id="button">
       <button className={isTrue1 ? "green-button" : "red-button"} onClick={navigationt1}>09AM-12PM</button>
-      <button className={isTrue2 ? "green-button" : "red-button"} >12PM-03PM</button>
-      <button className={isTrue3 ? "green-button" : "red-button"} >03PM-06PM</button>
-      <button className={isTrue4 ? "green-button" : "red-button"} >06PM-09PM</button>
-    </div>
+      <button className={isTrue2 ? "green-button" : "red-button"} onClick={navigationt2} >12PM-03PM</button>
+      <button className={isTrue3 ? "green-button" : "red-button"} onClick={navigationt3} >03PM-06PM</button>
+      <button className={isTrue4 ? "green-button" : "red-button"} onClick={navigationt4} >06PM-09PM</button>
+      </div>
     </div>
     
      
    </div>
+   </div>
   )
-  
   }
-   
-
-
   </>
+  )
 }
 
 export default Appointment;

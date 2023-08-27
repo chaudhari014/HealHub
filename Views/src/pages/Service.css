@@ -1,18 +1,26 @@
 #container{
     width: 88%;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
     margin: 5% 6% 8% 6%;
-    height: 300px;
 
-    
+}
+
+#container1{
+    width: 88%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin: 5% 6% 8% 6%;
+
 }
 
 #card{
-    width: 98%;
-    margin: 0 1% 0 1%;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    padding: 1.5% 1% 1.5% 1%;
+    padding: 10px 10px 0 10px;
     display: grid;
     grid-template-columns: 1;
     text-align: center;
@@ -25,13 +33,14 @@
 }
 
 #card button{
+    
     background-color: #009688;
     color: white;
     height: 30px;
     width: 100px;
     border-radius: 5px;
     border: 0;
-    margin-left: 35px;
+    text-align: center;
 }
 
 #card button:hover{
@@ -75,9 +84,13 @@ h2{
     font-size: medium;
     border-radius: 7px;
 }
+
+#banner div button{
+    margin-bottom: 15px;
+}
+
 #banner div button:hover{
     cursor: pointer;
-
 }
 
 #banner :nth-child(1){
@@ -87,8 +100,8 @@ h2{
 }
 
 #card1{
-    width: 98%;
-    margin: 0 1% 0 1%;
+    
+    margin: 5px 5px 5px 5px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 0 0 1.5% 0;
     display: grid;
@@ -120,7 +133,71 @@ h2{
     cursor: pointer;
 }
 
-@media screen and (max-width: 1150px) {
-    
-    
+@media screen and (max-width: 1200px) {
+    #container{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+    }
 }
+
+@media screen and (max-width: 1000px) {
+    #container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+    #container1{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    #container1{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    #banner div:nth-child(2){
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    #container1{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    #banner div:nth-child(2){
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+  
+
+    #card{
+        height: 500px;
+    }
+
+    #banner div:nth-child(2){
+        display: none;
+    }
+}
+
+

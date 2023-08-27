@@ -11,6 +11,9 @@
     text-align: left;
     margin:10px 10px 10px 10px;
     height: 500px;
+    border: 3px solid #0097A7;
+    border-radius: 10px;
+    
 }
 
 #doc #card img{
@@ -32,4 +35,22 @@
     color: black;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 1150px) {
+    #doc{
+        
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+       
+}
+
+@media screen and (max-width: 750px) {
+    #doc{
+        
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+       
 }
