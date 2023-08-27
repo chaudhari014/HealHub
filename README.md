@@ -16,9 +16,9 @@ Greetings from the Heal Hub team! We're a passionate group of developers working
 
 ## Tech Stack
 
-**Client:** React, Javascript, CSS, Socket.io-Client
+**Client:** React, Javascript, CSS
 
-**Server:** Node, Express, MongoDB, Redis, Socket.io
+**Server:** Node, Express, MongoDB, Mongoose, Javascript, Redis, Socket.io, PassportJS
 
 
 ## Startup Commands
@@ -50,7 +50,7 @@ Join us at Heal Hub with a quick signup! Unlock seamless healthcare access: book
 ![SignUp Page](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
 ## Login Page
-Here you can Login to your account for instant access to your healthcare services. Your journey to convenient and reliable healthcare continues here.
+Here you can Log in to your account for instant access to your healthcare services. Your journey to convenient and reliable healthcare continues here.
 
 ![Login Page](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
@@ -61,7 +61,7 @@ Discover Easy Appointment Scheduling at Heal Hub! Our Appointment Page simplifie
 
 
 ## Payment Page
-Seamless Payments for Hassle-Free Healthcare at Heal Hub! Our Payment Page makes managing medical expenses a breeze. Safely handle transactions, review invoices, and keep track of your healthcare costs in one convenient location. Your health journey, made transparent and efficient.
+Seamless Payments for Hassle-Free Healthcare at Heal Hub! Our Payment Page makes managing medical expenses a breeze. Safely handle transactions, review invoices, and keep track of your healthcare costs in one convenient location. Your health journey is made transparent and efficient.
 
 ![Payment Page](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
