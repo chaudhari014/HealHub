@@ -1,0 +1,14 @@
+#drCard{
+    display: flex;
+}
+
+
+.green-button{
+    background-color: green;
+    color: white;
+}
+
+.red-button{
+    background-color: red;
+    color: white;
+}
