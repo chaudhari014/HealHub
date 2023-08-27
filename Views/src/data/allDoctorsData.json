@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Dr. Kirti Bhosale",
+    "email": "kirti@healhub.com",
+    "description": "Experienced cardiologist with a dedication to heart health. Specializes in diagnosing and treating cardiovascular conditions. Emphasizes personalized care and education. Actively participates in medical research.",
+    "speciality": "Cardiology",
+    "image": "https://avatars.githubusercontent.com/u/75576920?v=4"
+  },
+  {
+    "name": "Dr. Sujal Singh Thakur",
+    "email": "sujal@healhub.com",
+    "description": "Passionate pediatrician dedicated to exceptional care for children. Focused on early intervention and supportive environment. Expert in childhood illnesses and developmental concerns. Mentors students and promotes child wellness.",
+    "speciality": "Pediatrics",
+    "image": "https://avatars.githubusercontent.com/u/103262651?v=4"
+  },
+  {
+    "name": "Dr. Rahul Chaudhari",
+    "email": "rahul@healhub.com",
+    "description": "Experienced dermatologist specializing in skincare and cosmetic treatments. Enhances confidence through advanced procedures. Advocates sun safety and skincare education. Collaborates with schools for awareness.",
+    "speciality": "Dermatology",
+    "image": "https://avatars.githubusercontent.com/u/119409328?v=4"
+  },
+  {
+    "name": "Dr. Rushi Chate",
+    "email": "rushi@healhub.com",
+    "description": "Accomplished orthopedic surgeon specializing in musculoskeletal injuries and joint replacements. Focuses on restoring mobility and active lifestyles. Engages in medical missions and innovation.",
+    "speciality": "Orthopedics",
+    "image": "https://avatars.githubusercontent.com/u/115465073?v=4"
+  },
+  {
+    "name": "Dr. Sarah Miller",
+    "email": "sarah.miller@example.com",
+    "description": "Experienced psychiatrist providing compassionate mental health support and therapy. Develops personalized treatment plans for diverse conditions. Destigmatizes mental health and contributes to research.",
+    "speciality": "Psychiatrist",
+    "image": "https://avatars.githubusercontent.com/u/112679226?v=4"
+  },
+  {
+    "name": "Dr. Michael Brown",
+    "email": "michael.brown@example.com",
+    "description": "Dedicated oncologist providing personalized cancer care. Collaborates with teams for tailored approaches. Compassionate communication and shared decision-making. Actively involved in clinical trials and research.",
+    "speciality": "Oncology",
+    "image": "https://avatars.githubusercontent.com/u/112754571?v=4"
+  },
+  {
+    "name": "Dr. Mrunali Wilson",
+    "email": "mrunali.wilson@example.com",
+    "description": "Experienced obstetrician and gynecologist empowering women's health. Offers comprehensive services from prenatal care to menopause management. Advocates open communication and wellness.",
+    "speciality": "Obstetrics/Gynecology",
+    "image": "https://avatars.githubusercontent.com/u/112799850?v=4"
+  },
+  {
+    "name": "Dr. Christopher Martinez",
+    "email": "christopher.martinez@example.com",
+    "description": "Skilled neurologist specializing in diagnosis and treatment of neurological disorders. Advanced techniques for conditions like migraines and epilepsy. Improves patients' neurological well-being and quality of life.",
+    "speciality": "Neurology",
+    "image": "https://avatars.githubusercontent.com/u/97526754?v=4"
+  },
+  {
+    "name": "Dr. Elizabeth Clark",
+    "email": "elizabeth.clark@example.com",
+    "description": "Experienced family medicine practitioner focusing on preventive care. Empowers patients through education and building relationships. Services include routine check-ups, vaccinations, and disease management.",
+    "speciality": "Family Medicine",
+    "image": "https://avatars.githubusercontent.com/u/97656613?v=4"
+  },
+  {
+    "name": "Dr. David White",
+    "email": "david.white@example.com",
+    "description": "Experienced gastroenterologist specializing in digestive health and endoscopic procedures. Focuses on improving patients' gastrointestinal well-being. Provides comprehensive diagnostic evaluations and tailored treatments.",
+    "speciality": "Gastroenterology",
+    "image": "https://avatars.githubusercontent.com/u/110032896?v=4"
+  }
+]

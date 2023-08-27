@@ -8,6 +8,7 @@ import {
   SignIn,
   SignUp,
   Appointment,
+  AllDoctors,
 } from "./pages";
 import { Navbar, Footer } from "./components";
 import RoomPage from "./screens/Room";
@@ -26,6 +27,7 @@ function App(){
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/appointment" element={<Appointment />} />
+        <Route path="/all_doctors" element={<AllDoctors />} />
         <Route path="/pay" element={<Payment/>} />
 
       </Routes>

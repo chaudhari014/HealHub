@@ -16,7 +16,7 @@ const LobbyScreen = () => {
       // Check if the email in local storage matches the entered email for all users
       const storedEmail = localStorage.getItem("email");
       if (storedEmail !== email) {
-        alert("Please login with the correct email.");
+        alert("Invalid Email!");
         return;
       }
 
