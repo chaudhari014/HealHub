@@ -1,0 +1,71 @@
+.Lobby {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 20%;
+  margin: 2% 0;
+}
+
+.Lobby > div:nth-child(1) img {
+  width: 100%;
+}
+.Lobby > div:nth-child(2) {
+  text-align: center;
+}
+
+.Lobby > div:nth-child(2) .FormData {
+  margin: auto;
+  margin-top: 5%;
+}
+.Lobby > div:nth-child(2) .FormData input {
+  padding: 15px;
+  width: 70%;
+  margin-top: 2%;
+  border: none;
+  border-radius: 8px;
+  background-color: #54aca533;
+  outline: none;
+  font-size: medium;
+}
+
+.Lobby > div:nth-child(2) .FormData button {
+  padding: 15px 30px;
+  border: none;
+  margin-top: 5%;
+  background-color: #011224;
+  color: white;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 2%;
+}
+@media screen and (max-width: 1200px) {
+  .Lobby {
+    padding: 0 10%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .Lobby {
+    padding: 0 10%;
+  }
+  .Lobby {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 20%;
+  }
+  .Lobby > div:nth-child(2) h1 {
+    font-size: x-large;
+  }
+  .Lobby > div:nth-child(2) .FormData input {
+    font-size: small;
+  }
+}
+@media screen and (max-width: 650px) {
+  .Lobby {
+    padding: 0 10%;
+  }
+}
+@media screen and (max-width: 360px) {
+  .Lobby {
+    padding: 0 0%;
+  }
+}
