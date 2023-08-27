@@ -21,6 +21,7 @@ Greetings from the Heal Hub team! We're a passionate group of developers working
 ## Environment Variables
 
 To run this project, you will need to add the following environment variables to your .env file
+
 `PORT`
 `SECRET`
 `REDIS_HOST` 
