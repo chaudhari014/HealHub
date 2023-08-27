@@ -5,6 +5,7 @@ import VideoConsult from "./VideoConsult";
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
 import Appointment from "./Appointment";
+import AllDoctors from "./AllDoctors";
 
 export {
   Homepage,
@@ -14,4 +15,5 @@ export {
   SignIn,
   SignUp,
   Appointment,
+  AllDoctors,
 };
