@@ -7,6 +7,7 @@ import {
   VideoConsult,
   SignIn,
   SignUp,
+  Appointment,
 } from "./pages";
 import { Navbar, Footer } from "./components";
 import RoomPage from "./screens/Room";
@@ -23,6 +24,7 @@ function App() {
         <Route path="/room/:id" element={<RoomPage />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/appointment" element={<Appointment />} />
       </Routes>
       <Footer />
     </div>
