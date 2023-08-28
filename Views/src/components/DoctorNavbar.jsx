@@ -54,7 +54,10 @@ function DoctorNavbar() {
               </Link>
             </li>
             <li>
-              <Link to={"/"}>My Appointments</Link>
+              <Link to={"/appointment"}>My Appointments</Link>
+            </li>
+            <li>
+              <Link to={"/video_consult"}>Video Consultant</Link>
             </li>
             <li>
               <Link to={"/"}>Lab Tests</Link>
