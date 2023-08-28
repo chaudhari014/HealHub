@@ -124,6 +124,85 @@ function PaymentForm() {
               >
                 cancel Appotment
               </button>
+    const stripe = useStripe();
+    const [option, setOption] = useState(0);
+    const [paymetntStatus,setStatus]=useState(true)
+    const [error, setError] = useState(true);
+    const elements = useElements();
+    const handleTestTransfer = async () => {
+        if (!stripe) {
+          return;
+        }
+        const { paymentMethod, error } = await stripe.createPaymentMethod({
+            type: 'card',
+            card: elements.getElement(CardNumberElement),
+          });
+          if (error) {
+           // localStorage.setItem("statusPayment",error.message)
+           setError(error.message)
+            console.error('Error creating payment method:', error);
+          } else {
+            setStatus(false)
+        try {
+          let response = await fetch(`${API}/payment`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({paymentMethodId: paymentMethod.id})
+          });
+          if (response.ok) {
+             let  res= await response.json()
+            //console.log(res)
+            await new Promise(resolve => setTimeout(resolve, 4000));
+            // navigate("/success")
+            alert("payment successfully done")
+            navigate("/video_consult");
+            localStorage.setItem("status",true)
+            console.log('Test money transfer successful');
+          } else {
+            // localStorage.setItem("statusPayment",true)
+            console.error('Test money transfer failed');
+          }
+        } catch (error) {
+          localStorage.setItem("statusPayment",false)
+          localStorage.setItem("error",JSON.stringify(error))
+          console.error('Error:', error);
+        }
+      }
+    };
+   
+    const handleOptionClick = (value) => {
+      
+      setOption(value);
+    };
+
+    let appotmentDetail=localStorage.getItem("docInfo")|| [{image:"https://t4.ftcdn.net/jpg/02/45/51/51/360_F_245515156_h2nHzDquKJxygpkOkG4UsMV5So5uh3LF.jpg",
+  price:499,
+  time:"7:00pm-7:30pm",
+  name:"MS Dhoni"
+}]
+    return (
+        <>
+        {
+          paymetntStatus?<>
+            <div className='paymentForm'>
+              <div id='detail'>
+                <div className='image'> 
+                  <img src={appotmentDetail[0].image} alt="" />
+                </div>
+                <h2>Name:{appotmentDetail[0].name}</h2>
+                <h3>Time:{appotmentDetail[0].time}</h3>
+                <h3>Price:{appotmentDetail[0].price} ₹</h3>
+                <button onClick={()=>
+                  window.confirm("Are You Sure You Want to Cancel Appotment")?
+                  navigate("/find_doctors"):""}>Cancel Appointment</button>
+              </div>
+
+              {/* <div className='responsive'> */}
+                <div className='payOption'>
+                <div>
+                Payment option
             </div>
             <div className="payOption">
               <div>Payment option</div>
@@ -227,6 +306,14 @@ function PaymentForm() {
               {/* Rest of your payment page content */}
             </div>
           </div>
+            {/* </div> */}
+            </>: <div className="spinner-container">
+      <div className="loading-spinner">
+      </div>
+      <p >Processing payment... Please wait.</p>
+        
+    </div>
+}
         </>
       ) : (
         <div className="spinner-container">

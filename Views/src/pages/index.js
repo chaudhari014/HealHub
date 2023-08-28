@@ -6,6 +6,7 @@ import SignIn from "./SignIn";
 import SignUp from "./SignUp";
 import Appointment from "./Appointment";
 import AllDoctors from "./AllDoctors";
+import Payment from "./Payment";
 
 export {
   Homepage,
@@ -16,4 +17,5 @@ export {
   SignUp,
   Appointment,
   AllDoctors,
+  Payment,
 };

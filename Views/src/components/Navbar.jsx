@@ -1,18 +1,19 @@
+<<<<<<< HEAD
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { logoImage } from "../images";
 import API from "../Api";
+=======
+>>>>>>> 408ae83d2e974dbe5fbffdacc0c04a23dfe8eef4
 import "./Navbar.css";
+import UserNavbar from "./UserNavbar";
+import DoctorNavbar from "./DoctorNavbar";
 
 function Navbar() {
-  const [barOrTabClicked, setBarOrTabClicked] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
-
-  // localStorage.setItem("user", "John Doe");
-  const userName = localStorage.getItem("user");
   const role = localStorage.getItem("role") || "customer";
 
+<<<<<<< HEAD
   const handleBarOrTabClicked = () => {
     setBarOrTabClicked(!barOrTabClicked);
   };
@@ -403,6 +404,9 @@ function Navbar() {
       )}
     </>
   );
+=======
+  return <>{role == "customer" ? <UserNavbar /> : <DoctorNavbar />}</>;
+>>>>>>> 408ae83d2e974dbe5fbffdacc0c04a23dfe8eef4
 }
 
 export default Navbar;

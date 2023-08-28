@@ -20,7 +20,10 @@ function Appointment() {
         const myObj = {
           id:appointDr[0]._id,
           slot:"t1",
-          time:"9AM-12PM"
+          time:"9AM-12PM",
+          name:appointDr[0].name,
+        speciality:appointDr[0].Speciality,
+        price:appointDr[0].price
         };
         localStorage.setItem("docInfo", JSON.stringify(myObj))
         alert("Booking Appointment 9AM-12PM")
@@ -37,7 +40,10 @@ function Appointment() {
       const myObj = {
         id:appointDr[0]._id,
         slot:"t2",
-        time:"12PM-03PM"
+        time:"12PM-03PM",
+        name:appointDr[0].name,
+        speciality:appointDr[0].Speciality,
+        price:appointDr[0].price
       };
       localStorage.setItem("docInfo", JSON.stringify(myObj))
       alert("Booking Appointment 12PM-03PM")
@@ -54,7 +60,11 @@ function Appointment() {
       const myObj = {
         id:appointDr[0]._id,
         slot:"t3",
-        time:"03PM-06PM"
+        time:"03PM-06PM",
+        name:appointDr[0].name,
+        speciality:appointDr[0].Speciality,
+        price:appointDr[0].price
+
       };
       localStorage.setItem("docInfo", JSON.stringify(myObj))
       alert("Booking Appointment 03AM-06PM")
@@ -71,7 +81,10 @@ function Appointment() {
       const myObj = {
         id:appointDr[0]._id,
         slot:"t4",
-        time:"06PM-09PM"
+        time:"06PM-09PM",
+        name:appointDr[0].name,
+        speciality:appointDr[0].Speciality,
+        price:appointDr[0].price
       };
       localStorage.setItem("docInfo", JSON.stringify(myObj))
       alert("Booking Appointment 06PM-09PM")

@@ -17,7 +17,6 @@ const StatusPayment= async (req,res)=>{
     res.send(error)
    }
 }
-
 const addAppointment = async (req, res) => {
   const { time, userId, docId } = req.body;
   let status = false;
@@ -28,7 +27,11 @@ const addAppointment = async (req, res) => {
       userId,
       docId
     });
+<<<<<<< HEAD
     let paymentSuccess = true;
+=======
+    // Payment confirmed logic { ...here }
+>>>>>>> 408ae83d2e974dbe5fbffdacc0c04a23dfe8eef4
     if (paymentSuccess) {
       status = true;
       addAppoint.status = status;
@@ -46,7 +49,6 @@ const addAppointment = async (req, res) => {
     res.status(400).json({ error: error.message });
   }
 };
-
 module.exports = {
   addAppointment,
   StatusPayment
