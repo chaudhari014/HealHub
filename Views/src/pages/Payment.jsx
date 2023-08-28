@@ -8,6 +8,11 @@ import API from "../Api"
 const stripePromise = loadStripe('pk_test_51NiVoJSDWqjglPyjCiGHQwUWZ5MomtW3lWAJwKZPTDieWr0d8Z6de229SLxKTrp9sf2tm9AQSEdvFFgDZnrN0Hjd00Lpy2h2sy');
 
 function PaymentForm() {
+  let appotmentDetail=JSON.parse(localStorage.getItem("docInfo"))|| {image:"https://t4.ftcdn.net/jpg/02/45/51/51/360_F_245515156_h2nHzDquKJxygpkOkG4UsMV5So5uh3LF.jpg",
+  price:499,
+  time:"7:00pm-7:30pm",
+  name:"MS Dhoni"
+}
   const navigate = useNavigate();
     const stripe = useStripe();
     const [option, setOption] = useState(0);
@@ -39,12 +44,25 @@ function PaymentForm() {
           if (response.ok) {
              let  res= await response.json()
             //console.log(res)
-            await new Promise(resolve => setTimeout(resolve, 4000));
+              //  const updateDoctoreSlote= await fetch(`${API}/doctors/:${appotmentDetail.id}`,{
+              //   method:"PUT",
+              //   headers: {
+              //     'Content-Type': 'application/json'
+              //   },
+              //   body: JSON.stringify(appotmentDetail.slot)
+              // })
+              // if(updateDoctoreSlote.ok){
+                alert("payment successfully done")
+                navigate("/video_consult");
+                localStorage.setItem("status",true)
+                console.log('Test money transfer successful');
+            //   }
+            //   else{
+            //     setStatus(true)
+            // alert("Slote not book Payment not Successfull try again")
+            //   }
+            // await new Promise(resolve => setTimeout(resolve, 2000));
             // navigate("/success")
-            alert("payment successfully done")
-            navigate("/video_consult");
-            localStorage.setItem("status",true)
-            console.log('Test money transfer successful');
           } else {
             // localStorage.setItem("statusPayment",true)
             console.error('Test money transfer failed');
@@ -62,11 +80,6 @@ function PaymentForm() {
       setOption(value);
     };
 
-    let appotmentDetail=localStorage.getItem("docInfo")|| [{image:"https://t4.ftcdn.net/jpg/02/45/51/51/360_F_245515156_h2nHzDquKJxygpkOkG4UsMV5So5uh3LF.jpg",
-  price:499,
-  time:"7:00pm-7:30pm",
-  name:"MS Dhoni"
-}]
     return (
         <>
         {
@@ -74,11 +87,12 @@ function PaymentForm() {
             <div className='paymentForm'>
               <div id='detail'>
                 <div className='image'> 
-                  <img src={appotmentDetail[0].image} alt="" />
+                  <img src="https://t4.ftcdn.net/jpg/02/45/51/51/360_F_245515156_h2nHzDquKJxygpkOkG4UsMV5So5uh3LF.jpg" alt="" />
                 </div>
-                <h2>Name:{appotmentDetail[0].name}</h2>
-                <h3>Time:{appotmentDetail[0].time}</h3>
-                <h3>Price:{appotmentDetail[0].price} ₹</h3>
+                <h2>Name:{appotmentDetail.name}</h2>
+                <h3>Speciality:{appotmentDetail.speciality}</h3>
+                <h3>Time:{appotmentDetail.time}</h3>
+                <h3>Price:{appotmentDetail.price} ₹</h3>
                 <button onClick={()=>
                   window.confirm("Are You Sure You Want to Cancel Appotment")?
                   navigate("/find_doctors"):""}>Cancel Appointment</button>
@@ -104,7 +118,7 @@ function PaymentForm() {
                         <div className="custom-card-element">
                           <label>amount</label>
                           <div className="card-number-input amount">
-                            <input type="text"  placeholder='amount' value={appotmentDetail[0].price} disabled={paymetntStatus}/>
+                            <input type="text"  placeholder='amount' value={appotmentDetail.price} disabled={paymetntStatus}/>
                           </div>
                             <label>Card Number</label>
                             <div className="card-number-input">
