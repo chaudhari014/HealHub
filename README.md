@@ -42,7 +42,7 @@ For Server:
 ## Home Page
 Explore the Healthcare Possibilities from Our Homepage! At Heal Hub, our homepage serves as your launchpad to a range of healthcare services. Seamlessly navigate to different routes within our platform – from scheduling appointments to engaging in video consultations. Your journey to accessible and comprehensive healthcare begins here.
 
-![Home Page](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![User Home Page]([https://via.placeholder.com/468x300?text=App+Screenshot+Here](https://github.com/chaudhari014/handy-string-7765/blob/main/Views/src/images/readme_file_data/userHomePage.PNG?raw=true))
 
 ## SignUp Page
 Join us at Heal Hub with a quick signup! Unlock seamless healthcare access: book appointments, video consult in emergencies, and manage your health, all in one secure account. Your journey to effortless healthcare starts here
