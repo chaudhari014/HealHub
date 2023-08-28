@@ -48,7 +48,7 @@ app.use("/", doctorRouter);
 
 app.use("/", logoutRouter);
 
-const io = new Server(8000, {
+const io = new Server(process.env.CLIENT_PORT, {
   cors: true,
 });
 const emailToSocketIdMap = new Map();
