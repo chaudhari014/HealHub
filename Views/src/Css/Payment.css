@@ -16,7 +16,6 @@
 .custom-card-element{
   padding: 10px;
 }
-
 .custom-card-element .card-number-input,
 .custom-card-element .expiration-input,
 .custom-card-element .cvv-input {
@@ -167,4 +166,29 @@
   border-radius: 8px;
   cursor: pointer;
   transition: 1s;
+}
+/* .responsive{
+  display: flex;
+  border: 1px solid black;
+  width: 70%;
+  gap: 1px;
+} */
+/* .responsive div:nth-child(2){
+  width: 50%;
+} */
+@media screen and (max-width:1000px){
+   .paymentForm{
+    display: block ;
+   }
+   #detail{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+
+   }
+   #detail .image{
+    width: 20%;
+   }
 }

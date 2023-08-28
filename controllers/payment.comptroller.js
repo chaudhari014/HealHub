@@ -8,11 +8,10 @@ const  stripe=require("stripe")("sk_test_51NiVoJSDWqjglPyj5JOYqp0fgKligKcfsCHYnY
        currency: 'usd',
       payment_method: paymentMethodId,
     });
-    console.log(paymentIntent)
+    // console.log(paymentIntent)
     res.json( {success:true })
    } catch (error) {
     res.send(error)
    }
 }
-
 module.exports={StatusPayment}
