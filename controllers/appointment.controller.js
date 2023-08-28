@@ -27,11 +27,8 @@ const addAppointment = async (req, res) => {
       userId,
       docId
     });
-<<<<<<< HEAD
     let paymentSuccess = true;
-=======
     // Payment confirmed logic { ...here }
->>>>>>> 408ae83d2e974dbe5fbffdacc0c04a23dfe8eef4
     if (paymentSuccess) {
       status = true;
       addAppoint.status = status;
