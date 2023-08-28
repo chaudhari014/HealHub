@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import "./FindDoctor.css";
 import API from "../Api";
@@ -34,8 +35,9 @@ function FindDoctors() {
           console.log(error);
         });
     }
-  }, [expert]);
-
+   
+  },[expert])
+ 
   return (
     <>
       <div className="findDoctors">

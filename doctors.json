@@ -1,0 +1,542 @@
+[
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            {
+                "t1": true,
+                "t2": false,
+                "t3": true,
+                "t4": false
+            }
+        ],
+        "status": true,
+        "name": "Dr. Emily Smith",
+        "email": "emily.smith@example.com",
+        "Speciality": "Gynaecology",
+        "description": "Experienced gynecologist.",
+        "price": 499,
+        "rating": 4.7
+    },
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            {
+                "t1": false,
+                "t2": true,
+                "t3": false,
+                "t4": true
+            }
+        ],
+        "status": true,
+        "name": "Dr. Sarah Johnson",
+        "email": "sarah.johnson@example.com",
+        "Speciality": "Gynaecology",
+        "description": "Specializing in reproductive health.",
+        "price": 599,
+        "rating": 4.9
+    },
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            {
+                "t1": false,
+                "t2": true,
+                "t3": true,
+                "t4": false
+            }
+        ],
+        "status": true,
+        "name": "Dr. Alex Johnson",
+        "email": "alex.johnson@example.com",
+        "Speciality": "Sexology",
+        "description": "Expert in sexual health.",
+        "price": 599,
+        "rating": 4.9
+    },
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            {
+                "t1": true,
+                "t2": true,
+                "t3": true,
+                "t4": true
+            }
+        ],
+        "status": true,
+        "name": "Dr. John Williams",
+        "email": "john.williams@example.com",
+        "Speciality": "General Physician",
+        "description": "Providing comprehensive medical care.",
+        "price": 399,
+        "rating": 4.5
+    },
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            {
+                "t1": true,
+                "t2": false,
+                "t3": true,
+                "t4": false
+            }
+        ],
+        "status": true,
+        "name": "Dr. Emma Davis",
+        "email": "emma.davis@example.com",
+        "Speciality": "General Physician",
+        "description": "Caring for a wide range of medical conditions.",
+        "price": 499,
+        "rating": 4.6
+    },
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            {
+                "t1": true,
+                "t2": true,
+                "t3": false,
+                "t4": false
+            }
+        ],
+        "status": true,
+        "name": "Dr. Michael Johnson",
+        "email": "michael.johnson@example.com",
+        "Speciality": "Dermatology",
+        "description": "Expert in skin health and treatments.",
+        "price": 299,
+        "rating": 4.8
+    },
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            {
+                "t1": false,
+                "t2": true,
+                "t3": false,
+                "t4": true
+            }
+        ],
+        "status": true,
+        "name": "Dr. Maria Rodriguez",
+        "email": "maria.rodriguez@example.com",
+        "Speciality": "Dermatology",
+        "description": "Specializing in skin conditions and aesthetics.",
+        "price": 999,
+        "rating": 4.7
+    },
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            {
+                "t1": true,
+                "t2": true,
+                "t3": true,
+                "t4": false
+            }
+        ],
+        "status": true,
+        "name": "Dr. William Jackson",
+        "email": "william.jackson@example.com",
+        "Speciality": "Psychiatry",
+        "description": "Expert in mental health and well-being.",
+        "price": 999,
+        "rating": 4.9
+    },
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            {
+                "t1": false,
+                "t2": false,
+                "t3": true,
+                "t4": true
+            }
+        ],
+        "status": true,
+        "name": "Dr. Olivia Martinez",
+        "email": "olivia.martinez@example.com",
+        "Speciality": "Psychiatry",
+        "description": "Providing compassionate mental health care.",
+        "price": 599,
+        "rating": 4.8
+    },
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            {
+                "t1": true,
+                "t2": true,
+                "t3": true,
+                "t4": true
+            }
+        ],
+        "status": true,
+        "name": "Dr. Samuel Brown",
+        "email": "samuel.brown@example.com",
+        "Speciality": "Psychiatry",
+        "description": "Expert in cognitive and behavioral therapies.",
+        "price": 999,
+        "rating": 4.7
+    },
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            {
+                "t1": false,
+                "t2": true,
+                "t3": false,
+                "t4": true
+            }
+        ],
+        "status": true,
+        "name": "Dr. Chloe Williams",
+        "email": "chloe.williams@example.com",
+        "Speciality": "Stomach",
+        "description": "Expert in gastrointestinal health.",
+        "price": 299,
+        "rating": 4.6
+    },
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            {
+                "t1": true,
+                "t2": true,
+                "t3": true,
+                "t4": true
+            }
+        ],
+        "status": true,
+        "name": "Dr. Ethan Davis",
+        "email": "ethan.davis@example.com",
+        "Speciality": "Stomach",
+        "description": "Treating digestive system disorders.",
+        "price": 599,
+        "rating": 4.9
+    },
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            {
+                "t1": false,
+                "t2": true,
+                "t3": false,
+                "t4": true
+            }
+        ],
+        "status": true,
+        "name": "Dr. Sophia Martin",
+        "email": "sophia.martin@example.com",
+        "Speciality": "Gynaecology",
+        "description": "Expert in women's reproductive health.",
+        "price": 299,
+        "rating": 4.8
+    },
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            {
+                "t1": true,
+                "t2": false,
+                "t3": true,
+                "t4": false
+            }
+        ],
+        "status": true,
+        "name": "Dr. Benjamin Wilson",
+        "email": "benjamin.wilson@example.com",
+        "Speciality": "Sexology",
+        "description": "Providing guidance on sexual health.",
+        "price": 999,
+        "rating": 4.7
+    },
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            {
+                "t1": false,
+                "t2": true,
+                "t3": true,
+                "t4": false
+            }
+        ],
+        "status": true,
+        "name": "Dr. Lily Parker",
+        "email": "lily.parker@example.com",
+        "Speciality": "Sexology",
+        "description": "Counseling for sexual wellness.",
+        "price": 599,
+        "rating": 4.9
+    },
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            {
+                "t1": true,
+                "t2": false,
+                "t3": true,
+                "t4": false
+            }
+        ],
+        "status": true,
+        "name": "Dr. Andrew Miller",
+        "email": "andrew.miller@example.com",
+        "Speciality": "General Physician",
+        "description": "Comprehensive medical care for all ages.",
+        "price": 399,
+        "rating": 4.7
+    },
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            {
+                "t1": false,
+                "t2": true,
+                "t3": false,
+                "t4": true
+            }
+        ],
+        "status": true,
+        "name": "Dr. Victoria Lee",
+        "email": "victoria.lee@example.com",
+        "Speciality": "General Physician",
+        "description": "Primary care physician for diverse health needs.",
+        "price": 499,
+        "rating": 4.6
+    },
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            {
+                "t1": true,
+                "t2": true,
+                "t3": false,
+                "t4": false
+            }
+        ],
+        "status": true,
+        "name": "Dr. Christopher Wilson",
+        "email": "christopher.wilson@example.com",
+        "Speciality": "Dermatology",
+        "description": "Specialist in skin disorders and treatments.",
+        "price": 299,
+        "rating": 4.8
+    },
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            {
+                "t1": false,
+                "t2": true,
+                "t3": false,
+                "t4": true
+            }
+        ],
+        "status": true,
+        "name": "Dr. Sophia Williams",
+        "email": "sophia.williams@example.com",
+        "Speciality": "Psychiatry",
+        "description": "Expert in mental health diagnosis and therapy.",
+        "price": 599,
+        "rating": 4.9
+    },
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            {
+                "t1": true,
+                "t2": true,
+                "t3": true,
+                "t4": true
+            }
+        ],
+        "status": true,
+        "name": "Dr. Daniel Johnson",
+        "email": "daniel.johnson@example.com",
+        "Speciality": "Stomach",
+        "description": "Specialist in gastrointestinal disorders.",
+        "price": 999,
+        "rating": 4.7
+    },
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            {
+                "t1": false,
+                "t2": false,
+                "t3": true,
+                "t4": true
+            }
+        ],
+        "status": true,
+        "name": "Dr. Isabella Martinez",
+        "email": "isabella.martinez@example.com",
+        "Speciality": "Stomach",
+        "description": "Gastroenterologist with a focus on digestive health.",
+        "price": 299,
+        "rating": 4.8
+    },
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            {
+                "t1": true,
+                "t2": false,
+                "t3": true,
+                "t4": false
+            }
+        ],
+        "status": true,
+        "name": "Dr. Ava Johnson",
+        "email": "ava.johnson@example.com",
+        "Speciality": "Gynaecology",
+        "description": "Compassionate care for women's health.",
+        "price": 399,
+        "rating": 4.6
+    },
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            {
+                "t1": false,
+                "t2": true,
+                "t3": false,
+                "t4": true
+            }
+        ],
+        "status": true,
+        "name": "Dr. Jackson Brown",
+        "email": "jackson.brown@example.com",
+        "Speciality": "Gynaecology",
+        "description": "Expertise in reproductive health and fertility.",
+        "price": 599,
+        "rating": 4.7
+    },
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            {
+                "t1": true,
+                "t2": true,
+                "t3": false,
+                "t4": false
+            }
+        ],
+        "status": true,
+        "name": "Dr. Lily Wilson",
+        "email": "lily.wilson@example.com",
+        "Speciality": "Sexology",
+        "description": "Counseling for sexual health and relationships.",
+        "price": 999,
+        "rating": 4.8
+    },
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            {
+                "t1": false,
+                "t2": true,
+                "t3": false,
+                "t4": true
+            }
+        ],
+        "status": true,
+        "name": "Dr. Lucas Smith",
+        "email": "lucas.smith@example.com",
+        "Speciality": "General Physician",
+        "description": "Comprehensive medical care for all ages.",
+        "price": 299,
+        "rating": 4.7
+    },
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            {
+                "t1": true,
+                "t2": false,
+                "t3": true,
+                "t4": false
+            }
+        ],
+        "status": true,
+        "name": "Dr. Olivia Williams",
+        "email": "olivia.williams@example.com",
+        "Speciality": "General Physician",
+        "description": "Caring for diverse health needs.",
+        "price": 599,
+        "rating": 4.6
+    },
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            {
+                "t1": true,
+                "t2": true,
+                "t3": false,
+                "t4": false
+            }
+        ],
+        "status": true,
+        "name": "Dr. Leo Johnson",
+        "email": "leo.johnson@example.com",
+        "Speciality": "Dermatology",
+        "description": "Expert in skin health and conditions.",
+        "price": 599,
+        "rating": 4.8
+    },
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            {
+                "t1": false,
+                "t2": true,
+                "t3": false,
+                "t4": true
+            }
+        ],
+        "status": true,
+        "name": "Dr. Ava Williams",
+        "email": "ava.williams@example.com",
+        "Speciality": "Psychiatry",
+        "description": "Expert in mental health diagnosis and therapy.",
+        "price": 999,
+        "rating": 4.9
+    },
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            {
+                "t1": true,
+                "t2": true,
+                "t3": true,
+                "t4": true
+            }
+        ],
+        "status": true,
+        "name": "Dr. Ethan Johnson",
+        "email": "ethan.johnson@example.com",
+        "Speciality": "Stomach",
+        "description": "Gastrointestinal health specialist.",
+        "price": 299,
+        "rating": 4.7
+    },
+    {
+        "image": "https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_find_doctors.png",
+        "availability": [
+            {
+                "t1": false,
+                "t2": false,
+                "t3": true,
+                "t4": true
+            }
+        ],
+        "status": true,
+        "name": "Dr. Isabella Johnson",
+        "email": "isabella.johnson@example.com",
+        "Speciality": "Stomach",
+        "description": "Treating digestive system disorders.",
+        "price": 599,
+        "rating": 4.8
+    }
+]

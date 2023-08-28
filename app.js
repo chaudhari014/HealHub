@@ -5,15 +5,49 @@ const bodyParser = require("body-parser");
 const passport = require("passport");
 const session = require("express-session");
 
+const { Server } = require("socket.io");
 const { connection } = require("./database/db");
+
 const { registerRouter } = require("./routes/register.routes");
 const { loginRouter } = require("./routes/login.routes");
 const { doctorRouter } = require("./routes/doctor.routes");
-const {paymentStatus} =require("./routes/payment.routes")
+const { paymentStatus } = require("./routes/payment.routes");
 const { logoutRouter } = require("./routes/logout.routes");
+const { appointRouter } = require("./routes/appointment.routes");
+const { RegisterModel } = require("./Models/register.model");
 
-// k start
-const { Server } = require("socket.io");
+const app = express();
+
+// Middleware
+app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
+app.use(
+  session({
+    secret: process.env.SECRET,
+    resave: false,
+    saveUninitialized: false,
+  })
+  );
+app.use(passport.initialize());
+app.use(passport.session());
+
+passport.use(RegisterModel.createStrategy());
+
+passport.serializeUser(RegisterModel.serializeUser());
+passport.deserializeUser(RegisterModel.deserializeUser());
+
+
+// Routes
+app.use("/", loginRouter);
+app.use("/", registerRouter);
+// Apply authentication middleware to protected routes
+app.use("/", paymentStatus);
+app.use("/", appointRouter);
+app.use("/", doctorRouter);
+
+app.use("/", logoutRouter);
+
 const io = new Server(8000, {
   cors: true,
 });
@@ -48,34 +82,12 @@ io.on("connection", (socket) => {
   });
 
   socket.on("call:end", () => {
-    // Get the room for the current socket
     const room = Object.keys(socket.rooms)[0];
 
-    // Emit the call:end event to all participants in the room
     io.to(room).emit("call:end");
   });
 });
-//k end
-const app = express();
 
-app.use(express.json());
-app.use(cors());
-app.use(bodyParser.urlencoded({ extended: true }));
-
-app.use(
-  session({
-    secret: process.env.SECRET,
-    resave: false,
-    saveUninitialized: false,
-  })
-);
-app.use(passport.initialize());
-app.use(passport.session());
-app.use("/", loginRouter);
-app.use("/", registerRouter);
-app.use("/", doctorRouter);
-app.use("/", paymentStatus)
-app.use("/", logoutRouter);
 const port = process.env.PORT;
 app.listen(port, async () => {
   try {

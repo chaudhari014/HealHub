@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { logoImage } from "../images";
+import API from "../Api";
 import "./Navbar.css";
 
 function DoctorNavbar() {
@@ -12,6 +13,24 @@ function DoctorNavbar() {
 
   const handleBarOrTabClicked = () => {
     setBarOrTabClicked(!barOrTabClicked);
+  };
+
+  const handleLogout = () => {
+    fetch(`${API}/logout`, { method: "GET" })
+      .then((response) => response.json())
+      // eslint-disable-next-line no-unused-vars
+      .then((data) => {
+        setIsHovered(!isHovered);
+        alert("User Logged out Successfully");
+        localStorage.removeItem("email");
+        localStorage.removeItem("user");
+        localStorage.removeItem("role");
+        localStorage.removeItem("docInfo");
+        localStorage.removeItem("userID");
+      })
+      .catch((error) => {
+        console.error("Logout error:", error);
+      });
   };
 
   return (
@@ -78,14 +97,7 @@ function DoctorNavbar() {
                         </li>
                         <li>
                           <Link
-                            onClick={() => {
-                              localStorage.removeItem("email");
-                              localStorage.removeItem("user");
-                              localStorage.removeItem("role");
-                              localStorage.removeItem("userID");
-                              setIsHovered(!isHovered);
-                              alert("User Logged out Successfully");
-                            }}
+                            onClick={handleLogout}
                             to={"/"}
                           >
                             Logout
