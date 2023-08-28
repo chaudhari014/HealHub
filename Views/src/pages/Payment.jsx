@@ -22,7 +22,6 @@ function PaymentForm() {
             type: 'card',
             card: elements.getElement(CardNumberElement),
           });
-        
           if (error) {
            // localStorage.setItem("statusPayment",error.message)
            setError(error.message)
@@ -59,10 +58,11 @@ function PaymentForm() {
     };
    
     const handleOptionClick = (value) => {
+      
       setOption(value);
     };
 
-    let appotmentDetail=localStorage.getItem("doctoreDetail")|| [{image:"https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/57.png",
+    let appotmentDetail=localStorage.getItem("docInfo")|| [{image:"https://t4.ftcdn.net/jpg/02/45/51/51/360_F_245515156_h2nHzDquKJxygpkOkG4UsMV5So5uh3LF.jpg",
   price:499,
   time:"7:00pm-7:30pm",
   name:"MS Dhoni"
@@ -81,8 +81,10 @@ function PaymentForm() {
                 <h3>Price:{appotmentDetail[0].price} ₹</h3>
                 <button onClick={()=>
                   window.confirm("Are You Sure You Want to Cancel Appotment")?
-                  navigate("/find_doctors"):""}>cancel Appotment</button>
+                  navigate("/find_doctors"):""}>Cancel Appointment</button>
               </div>
+
+              {/* <div className='responsive'> */}
                 <div className='payOption'>
                 <div>
                 Payment option
@@ -154,6 +156,7 @@ function PaymentForm() {
                     {/* Rest of your payment page content */}
                 </div>
             </div>
+            {/* </div> */}
             </>: <div className="spinner-container">
       <div className="loading-spinner">
       </div>
