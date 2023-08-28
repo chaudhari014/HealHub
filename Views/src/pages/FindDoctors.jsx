@@ -37,7 +37,6 @@ function FindDoctors() {
     }
    
   },[expert])
- 
   return (
     <>
       <div className="findDoctors">

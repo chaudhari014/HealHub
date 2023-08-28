@@ -15,6 +15,7 @@ const { paymentStatus } = require("./routes/payment.routes");
 const { logoutRouter } = require("./routes/logout.routes");
 const { appointRouter } = require("./routes/appointment.routes");
 const { RegisterModel } = require("./Models/register.model");
+const isAuthentarized = require("./middleware/isAuth");
 
 const app = express();
 
@@ -39,12 +40,12 @@ passport.deserializeUser(RegisterModel.deserializeUser());
 
 
 // Routes
-app.use("/", loginRouter);
+app.use("/", isAuthentarized,loginRouter);
 app.use("/", registerRouter);
 // Apply authentication middleware to protected routes
 app.use("/", paymentStatus);
 app.use("/", appointRouter);
-app.use("/", doctorRouter);
+app.use("/", isAuthentarized,doctorRouter);
 
 app.use("/", logoutRouter);
 

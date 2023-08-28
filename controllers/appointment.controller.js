@@ -28,7 +28,6 @@ const addAppointment = async (req, res) => {
       docId
     });
     let paymentSuccess = true;
-    // Payment confirmed logic { ...here }
     if (paymentSuccess) {
       status = true;
       addAppoint.status = status;
@@ -50,14 +49,3 @@ module.exports = {
   addAppointment,
   StatusPayment
 };
-
-// const addAppointment = async (req, res) => {
-//     const {time, status, userId, docId} = req.body;
-//     try {
-//         const addAppoint = await AppointModel(time, status, userId, docId);
-//         addAppoint.save();
-//         res.status(200).json({data: addAppoint });
-//     } catch (error) {
-//         res.status(400).json({error: error });
-//     }
-// }
