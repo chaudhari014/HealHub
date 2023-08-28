@@ -19,6 +19,15 @@ const stripePromise = loadStripe(
 );
 
 function PaymentForm() {
+  let appotmentDetail = JSON.parse(localStorage.getItem("docInfo")) || 
+    {
+      image:
+        "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/57.png",
+      price: 499,
+      time: "7:00pm-7:30pm",
+      name: "MS Dhoni",
+    }
+  
   const navigate = useNavigate();
   const stripe = useStripe();
   const [option, setOption] = useState(0);
@@ -58,7 +67,7 @@ function PaymentForm() {
         return;
       }
 
-      await new Promise((resolve) => setTimeout(resolve, 4000));
+      await new Promise((resolve) => setTimeout(resolve, 2000));
       const appointmentResponse = await fetch(`${API}/appointment/${id}`, {
         method: "POST",
         headers: {
@@ -91,15 +100,6 @@ function PaymentForm() {
     setOption(value);
   };
 
-  let appotmentDetail = localStorage.getItem("doctoreDetail") || [
-    {
-      image:
-        "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/57.png",
-      price: 499,
-      time: "7:00pm-7:30pm",
-      name: "MS Dhoni",
-    },
-  ];
 
   return (
     <>
@@ -107,11 +107,11 @@ function PaymentForm() {
         <div className="paymentForm">
           <div id="detail">
             <div className="image">
-              <img src={appotmentDetail[0].image} alt="" />
+              <img src="https://t4.ftcdn.net/jpg/02/45/51/51/360_F_245515156_h2nHzDquKJxygpkOkG4UsMV5So5uh3LF.jpg" alt="" />
             </div>
-            <h2>Name: {appotmentDetail[0].name}</h2>
-            <h3>Time: {appotmentDetail[0].time}</h3>
-            <h3>Price: {appotmentDetail[0].price} ₹</h3>
+            <h2>Name: {appotmentDetail.name}</h2>
+            <h3>Time: {appotmentDetail.time}</h3>
+            <h3>Price: {appotmentDetail.price} ₹</h3>
             <button
               onClick={() =>
                 window.confirm("Are You Sure You Want to Cancel Appointment")
@@ -173,7 +173,7 @@ function PaymentForm() {
                   <input
                     type="text"
                     placeholder="amount"
-                    value={appotmentDetail[0].price}
+                    value={appotmentDetail.price}
                     disabled={paymetntStatus}
                   />
                 </div>
