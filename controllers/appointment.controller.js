@@ -2,7 +2,7 @@ const { AppointModel } = require("../Models/appointment.model");
 const  stripe=require("stripe")("sk_test_51NiVoJSDWqjglPyj5JOYqp0fgKligKcfsCHYnY8Su9dHgcc706bK7Ez5Lfxca4mXTTnNHrGHgiimN8UMmR3CeyER00qbdhwM6Y")
 
 let paymentSuccess = false;
-StatusPayment= async (req,res)=>{
+const StatusPayment= async (req,res)=>{
   const { paymentMethodId } = req.body;
   console.log(paymentMethodId)
    try {
@@ -24,16 +24,11 @@ const addAppointment = async (req, res) => {
 
   try {
     const addAppoint = new AppointModel({
-      time: time,
-      userId: userId,
-      docId: docId,
+      time,
+      userId,
+      docId
     });
-
-    // Payment confirmed logic { ...here }
-   
- 
-
-    
+    let paymentSuccess = true;
     if (paymentSuccess) {
       status = true;
       addAppoint.status = status;
@@ -48,7 +43,7 @@ const addAppointment = async (req, res) => {
         });
     }
   } catch (error) {
-    res.status(400).json({ error: error });
+    res.status(400).json({ error: error.message });
   }
 };
 

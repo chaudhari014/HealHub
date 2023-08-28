@@ -1,6 +1,8 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { logoImage } from "../images";
+import API from "../Api";
 import "./Navbar.css";
 
 function Navbar() {
@@ -13,6 +15,22 @@ function Navbar() {
 
   const handleBarOrTabClicked = () => {
     setBarOrTabClicked(!barOrTabClicked);
+  };
+  const handleLogout = () => {
+    fetch(`${API}/logout`, { method: "GET" })
+      .then((response) => response.json())
+      .then((data) => {
+        setIsHovered(!isHovered);
+        alert("User Logged out Successfully");
+        localStorage.removeItem("email");
+        localStorage.removeItem("user");
+        localStorage.removeItem("role");
+        localStorage.removeItem("docInfo");
+        localStorage.removeItem("userID");
+      })
+      .catch((error) => {
+        console.error("Logout error:", error);
+      });
   };
 
   return (
@@ -86,17 +104,7 @@ function Navbar() {
                               </Link>
                             </li>
                             <li>
-                              <Link
-                                onClick={() => {
-                                  localStorage.removeItem("email");
-                                  localStorage.removeItem("user");
-                                  localStorage.removeItem("role");
-                                  localStorage.removeItem("userID");
-                                  setIsHovered(!isHovered);
-                                  alert("User Logged out Successfully");
-                                }}
-                                to={"/"}
-                              >
+                              <Link onClick={handleLogout} to={"/"}>
                                 Logout
                               </Link>
                             </li>
@@ -179,17 +187,7 @@ function Navbar() {
                               </li>
 
                               <li>
-                                <Link
-                                  onClick={() => {
-                                    localStorage.removeItem("email");
-                                    localStorage.removeItem("user");
-                                    localStorage.removeItem("role");
-                                    localStorage.removeItem("userID");
-                                    setIsHovered(!isHovered);
-                                    alert("User Logged out Successfully");
-                                  }}
-                                  to={"/"}
-                                >
+                                <Link onClick={handleLogout} to={"/"}>
                                   Logout
                                 </Link>
                               </li>
@@ -375,17 +373,7 @@ function Navbar() {
                               </li>
 
                               <li>
-                                <Link
-                                  onClick={() => {
-                                    localStorage.removeItem("email");
-                                    localStorage.removeItem("user");
-                                    localStorage.removeItem("role");
-                                    localStorage.removeItem("userID");
-                                    setIsHovered(!isHovered);
-                                    alert("User Logged out Successfully");
-                                  }}
-                                  to={"/"}
-                                >
+                                <Link onClick={handleLogout} to={"/"}>
                                   Logout
                                 </Link>
                               </li>

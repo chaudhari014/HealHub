@@ -38,6 +38,8 @@ const getAllDoc = async (req, res) => {
   }
 };
 
+
+
 module.exports = {
   getAllDoc,addDoctor
 };

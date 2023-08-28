@@ -15,6 +15,7 @@ const doctorSchema = mongoose.Schema({
   email: { type: String, required: true, unique: true },
   Speciality: { type: String, required: true },
   description: { type: String, required: true },
+  price: {type : Number, required : true},
   rating: {
     type: Number,
     required: true,

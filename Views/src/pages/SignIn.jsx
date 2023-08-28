@@ -2,8 +2,8 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FcGoogle } from "react-icons/fc";
-import { logoImage } from "../images";
+
+import GoogleAuth from "../components/GoogleAuth";
 import "../../public/signin/signin.css";
 import API from "../Api";
 
@@ -32,6 +32,7 @@ function SignIn() {
       if (response.ok) {
         const data = await response.json();
         console.log(data);
+        localStorage.setItem("status", false);
         localStorage.setItem("user", data.name);
         localStorage.setItem("role", data.role);
         localStorage.setItem("userID", data.userID);
@@ -83,18 +84,7 @@ function SignIn() {
           </div>
         </form>
       </div>
-      <div className="right_side">
-        <div>
-          <img src={logoImage} alt="logo" />
-          <fieldset>
-            <legend>Login With</legend>
-          </fieldset>
-          <button>
-            <FcGoogle />
-          </button>
-          <p>Google</p>
-        </div>
-      </div>
+      <GoogleAuth />
     </div>
   );
 }

@@ -4,8 +4,8 @@ import React, { useState } from "react";
 // eslint-disable-next-line no-unused-vars
 import API from "../Api";
 import { Link } from "react-router-dom";
-import { FcGoogle } from "react-icons/fc";
-import { logoImage } from "../images";
+
+import GoogleAuth from "../components/GoogleAuth";
 import "../../public/signin/signin.css";
 
 function SignUp() {
@@ -37,6 +37,7 @@ function SignUp() {
       if (response.status === 200) {
         const myData = await response.json();
         console.log(myData);
+        localStorage.setItem("status", false);
         localStorage.setItem("user", myData.data.name);
         localStorage.setItem("role", myData.data.role);
         localStorage.setItem("userID", myData.userID);
@@ -108,18 +109,7 @@ function SignUp() {
           </div>
         </form>
       </div>
-      <div className="right_side">
-        <div>
-          <img src={logoImage} alt="logo" />
-          <fieldset>
-            <legend>Register With</legend>
-          </fieldset>
-          <button>
-            <FcGoogle />
-          </button>
-          <p>Google</p>
-        </div>
-      </div>
+      <GoogleAuth />
     </div>
   );
 }
