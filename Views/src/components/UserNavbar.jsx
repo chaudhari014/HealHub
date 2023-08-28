@@ -34,13 +34,13 @@ function UserNavbar() {
               </Link>
             </li>
             <li>
-              <Link to={"/find_doctors"}>Find Doctors</Link>
+              <Link to={"/services"}>Our Services</Link>
+            </li>
+            <li>
+              <Link to={"/all_doctors"}>Our Doctors</Link>
             </li>
             <li>
               <Link to={"/video_consult"}>Video Consult</Link>
-            </li>
-            <li>
-              <Link to={"/services"}>Our Services</Link>
             </li>
             <li>
               <Link to={"/"}>Lab Tests</Link>
@@ -123,8 +123,8 @@ function UserNavbar() {
             <li></li>
 
             <li>
-              <Link onClick={handleBarOrTabClicked} to={"/find_doctors"}>
-                <i className="fa-solid fa-magnifying-glass"></i> Find Doctors -{" "}
+              <Link onClick={handleBarOrTabClicked} to={"/all_doctors"}>
+                <i className="fa-solid fa-magnifying-glass"></i> Our Doctors -{" "}
                 <span>Book an appointment</span>
               </Link>
             </li>

@@ -35,9 +35,6 @@ function DoctorNavbar() {
               </Link>
             </li>
             <li>
-              <Link to={"/all_doctors"}>All Doctors</Link>
-            </li>
-            <li>
               <Link to={"/"}>My Appointments</Link>
             </li>
             <li>
@@ -121,7 +118,7 @@ function DoctorNavbar() {
             <li></li>
 
             <li>
-              <Link onClick={handleBarOrTabClicked} to={"/all_doctors"}>
+              <Link onClick={handleBarOrTabClicked} to={"/"}>
                 <i className="fa-solid fa-magnifying-glass"></i> All Doctors -{" "}
                 <span>Our Soilders</span>
               </Link>
