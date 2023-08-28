@@ -14,7 +14,7 @@ import { Navbar, Footer } from "./components";
 import RoomPage from "./screens/Room";
 import Payment from "./pages/Payment";
 
-function App(){
+function App() {
   return (
     <div className="App">
       <Navbar />
@@ -28,10 +28,9 @@ function App(){
         <Route path="/signup" element={<SignUp />} />
         <Route path="/appointment" element={<Appointment />} />
         <Route path="/all_doctors" element={<AllDoctors />} />
-        <Route path="/pay" element={<Payment/>} />
-
+        <Route path="/pay" element={<Payment />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
