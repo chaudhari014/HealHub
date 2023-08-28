@@ -182,29 +182,29 @@ function PaymentForm() {
   time:"7:00pm-7:30pm",
   name:"MS Dhoni"
 }]
-    return (
-        <>
-        {
-          paymetntStatus?<>
-            <div className='paymentForm'>
-              <div id='detail'>
-                <div className='image'> 
-                  <img src={appotmentDetail[0].image} alt="" />
-                </div>
-                <h2>Name:{appotmentDetail[0].name}</h2>
-                <h3>Time:{appotmentDetail[0].time}</h3>
-                <h3>Price:{appotmentDetail[0].price} ₹</h3>
-                <button onClick={()=>
-                  window.confirm("Are You Sure You Want to Cancel Appotment")?
-                  navigate("/find_doctors"):""}>Cancel Appointment</button>
-              </div>
+return (
+  <>
+    {paymetntStatus ? (
+      <div className="paymentForm">
+        <div id="detail">
+          <div className="image">
+            <img src={appotmentDetail[0].image} alt="" />
+          </div>
+          <h2>Name: {appotmentDetail[0].name}</h2>
+          <h3>Time: {appotmentDetail[0].time}</h3>
+          <h3>Price: {appotmentDetail[0].price} ₹</h3>
+          <button
+            onClick={() =>
+              window.confirm("Are You Sure You Want to Cancel Appointment")
+                ? navigate("/find_doctors")
+                : ""
+            }
+          >
+            Cancel Appointment
+          </button>
+        </div>
 
-              {/* <div className='responsive'> */}
-                <div className='payOption'>
-                <div>
-                Payment option
-            </div>
-            <div className="payOption">
+        <div className="payOption">
               <div>Payment option</div>
               <ul>
                 <li
@@ -305,25 +305,18 @@ function PaymentForm() {
               </div>
               {/* Rest of your payment page content */}
             </div>
-          </div>
-            {/* </div> */}
-            </>: <div className="spinner-container">
-      <div className="loading-spinner">
+
+
       </div>
-      <p >Processing payment... Please wait.</p>
-        
-    </div>
-}
-        </>
-      ) : (
-        <div className="spinner-container">
-          <div className="loading-spinner"></div>
-          <p>Processing payment... Please wait.</p>
-        </div>
-      )}
-    </>
-  );
-}
+    ) : (
+      <div className="spinner-container">
+        <div className="loading-spinner"></div>
+        <p>Processing payment... Please wait.</p>
+      </div>
+    )}
+  </>
+);
+
 function Payment() {
   return (
     <>
