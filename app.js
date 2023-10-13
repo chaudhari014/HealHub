@@ -5,7 +5,6 @@ const bodyParser = require("body-parser");
 const passport = require("passport");
 const session = require("express-session");
 
-const { Server } = require("socket.io");
 const { connection } = require("./database/db");
 
 const { registerRouter } = require("./routes/register.routes");
@@ -21,14 +20,18 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors());
+const corsOptions = {
+  origin: "heal-hub.vercel.app/",
+  optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+};
+app.use(cors(corsOptions));
 app.use(
   session({
     secret: process.env.SECRET,
     resave: false,
     saveUninitialized: false,
   })
-  );
+);
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -36,7 +39,6 @@ passport.use(RegisterModel.createStrategy());
 
 passport.serializeUser(RegisterModel.serializeUser());
 passport.deserializeUser(RegisterModel.deserializeUser());
-
 
 // Routes
 app.use("/", loginRouter);
@@ -48,8 +50,21 @@ app.use("/", doctorRouter);
 
 app.use("/", logoutRouter);
 
-const io = new Server(process.env.CLIENT_PORT, {
-  cors: true,
+const port = process.env.PORT;
+const server = app.listen(port, async () => {
+  try {
+    console.log("server is running", port);
+    await connection;
+    console.log("database connected successfully");
+  } catch (error) {
+    console.log("not connected");
+  }
+});
+
+const io = require("socket.io")(server, {
+  cors: {
+    origin: "heal-hub.vercel.app/",
+  },
 });
 const emailToSocketIdMap = new Map();
 const socketIdToEmailMap = new Map();
@@ -86,15 +101,7 @@ io.on("connection", (socket) => {
 
     io.to(room).emit("call:end");
   });
-});
-
-const port = process.env.PORT;
-app.listen(port, async () => {
-  try {
-    console.log("server is running");
-    await connection;
-    console.log("database connected successfully");
-  } catch (error) {
-    console.log("not connected");
-  }
+  socket.on("disconnect", () => {
+    console.log(`Socket Disconnected: ${socket.id}`);
+  });
 });
