@@ -21,7 +21,7 @@ const app = express();
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 const corsOptions = {
-  origin: "heal-hub.vercel.app",
+  origin: "https://heal-hub.vercel.app",
   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 app.use(cors(corsOptions));
@@ -63,7 +63,7 @@ const server = app.listen(port, async () => {
 
 const io = require("socket.io")(server, {
   cors: {
-    origin: "heal-hub.vercel.app",
+    origin: "https://heal-hub.vercel.app",
   },
 });
 const emailToSocketIdMap = new Map();
