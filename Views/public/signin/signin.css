@@ -16,7 +16,8 @@
 }
 .container .left_side form h3 {
   font-size: 25px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 .container .left_side form label {
   font-size: 15px;
@@ -100,4 +101,12 @@
   color: white;
   margin-top: -4px;
   font-size: 14px;
-}/*# sourceMappingURL=signin.css.map */
+}
+@media (max-width: 1000px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=signin.css.map */

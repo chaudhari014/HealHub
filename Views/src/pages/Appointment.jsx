@@ -12,6 +12,7 @@ function Appointment() {
   const [isTrue4, setIsTrue4] = useState();
 
   const location = useLocation();
+  console.log(location);
   const drId = location.state.drsId;
 
   function navigationt1() {
